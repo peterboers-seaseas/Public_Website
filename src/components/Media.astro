@@ -1,0 +1,12 @@
+---
+// Shows an image if the file exists in /public, otherwise a labelled placeholder block.
+import fs from 'node:fs';
+import path from 'node:path';
+interface Props { src?: string; alt: string; label: string; class?: string; width?: number; height?: number }
+const { src, alt, label, class: cls = '', width, height } = Astro.props;
+const isRemote = !!src && /^https?:\/\//.test(src);
+const exists = !!src && (isRemote || fs.existsSync(path.join(process.cwd(), 'public', src)));
+---
+{exists
+  ? <img class={`media ${cls}`} src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+  : <div class={`media ph ${cls}`} role="img" aria-label={alt}>[{label}]</div>}

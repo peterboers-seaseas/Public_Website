@@ -1,0 +1,43 @@
+---
+// Horizontal slider: native scroll and swipe, plus previous/next buttons on desktop.
+import type { Lang } from '../i18n';
+import { t } from '../i18n';
+interface Props { lang: Lang; label: string }
+const { lang, label } = Astro.props;
+const d = t(lang);
+---
+<div class="slider-wrap" data-slider>
+  <div class="slider-head">
+    <button class="slider-btn" type="button" data-prev aria-label={d.slider.prev}>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#09029B" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+    </button>
+    <button class="slider-btn" type="button" data-next aria-label={d.slider.next}>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#09029B" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+    </button>
+  </div>
+  <div class="slider" role="region" aria-label={label} tabindex="0" data-track>
+    <slot />
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-slider]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-track]')!;
+    const prev = root.querySelector<HTMLButtonElement>('[data-prev]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-next]')!;
+    const step = () => {
+      const card = track.children[track.children.length > 1 ? 1 : 0] as HTMLElement | undefined;
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 24;
+      return card ? card.offsetWidth + gap : track.clientWidth * 0.8;
+    };
+    const update = () => {
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>

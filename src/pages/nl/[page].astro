@@ -1,0 +1,8 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+export function getStaticPaths() {
+  return ['privacy', 'cookies', 'disclaimer'].map((page) => ({ params: { page } }));
+}
+const { page } = Astro.params as { page: 'privacy' | 'cookies' | 'disclaimer' };
+---
+<LegalPage lang="nl" page={page} />

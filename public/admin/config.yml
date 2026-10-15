@@ -1,0 +1,59 @@
+# Decap CMS settings (editor at https://www.seaseas.nl/admin/)
+# 1. Replace OWNER below with the GitHub account or organisation that holds the repository.
+# 2. Login runs via GitHub. On Netlify: Site configuration > Access & security > OAuth > install GitHub provider.
+#    On GitHub Pages a small OAuth helper is needed instead (see README).
+backend:
+  name: github
+  repo: peterboers-seaseas/public_website
+  branch: main
+  base_url: https://api.netlify.com
+
+site_url: https://www.seaseas.nl
+display_url: https://www.seaseas.nl
+logo_url: /images/logo.png
+locale: en
+
+media_folder: public/images/news
+public_folder: /images/news
+
+i18n:
+  structure: multiple_folders
+  locales: [en, nl]
+  default_locale: en
+
+collections:
+  - name: news
+    label: News and publications
+    label_singular: News item
+    folder: src/content/news
+    create: true
+    i18n: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    summary: "{{date | date('YYYY-MM-DD')}} · {{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Date (used for ordering), name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD, i18n: duplicate }
+      - { label: "Date text (optional, e.g. 'Spring 2026')", name: dateLabel, widget: string, required: false, i18n: true }
+      - { label: "Type (e.g. Press release, Publication)", name: type, widget: string, i18n: true }
+      - { label: Image (16:9), name: image, widget: image, required: false, i18n: duplicate }
+      - { label: "Link (article, PDF or LinkedIn post)", name: link, widget: string, required: false, i18n: true }
+      - { label: "Link text (optional)", name: linkLabel, widget: string, required: false, i18n: true }
+      - { label: "Hide from site (draft)", name: draft, widget: boolean, default: false, i18n: duplicate }
+
+  - name: team
+    label: Team
+    label_singular: Team member
+    folder: src/content/team
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    media_folder: /public/images/team
+    public_folder: /images/team
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Role (English), name: role_en, widget: string }
+      - { label: Role (Dutch), name: role_nl, widget: string }
+      - { label: Portrait (square), name: photo, widget: image, required: false }
+      - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
+      - { label: Order in slider (1 = first), name: order, widget: number, value_type: int, default: 9 }

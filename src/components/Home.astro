@@ -1,0 +1,203 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+import Slider from './Slider.astro';
+import Video from './Video.astro';
+import Media from './Media.astro';
+import { t, url, type Lang } from '../i18n';
+import { VIDEOS, TEAM_PHOTO, FORM_ACTION } from '../config';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const nl = lang === 'nl';
+
+const news = (await getCollection('news', (e) => e.id.startsWith(`${lang}/`) && !e.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const team = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
+const fmt = new Intl.DateTimeFormat(nl ? 'nl-NL' : 'en-GB', { month: 'long', year: 'numeric' });
+
+const picto = (name: string) => `/images/pictograms/${name}.png`;
+const stepIcons = ['emitter', null, 'terminal', 'vessel', 'sink'];
+const stepClass = ['', '', 'is-terminal', '', 'is-storage'];
+const transport = ['pipeline', 'truck', 'rail', 'barge'];
+const netlify = !FORM_ACTION;
+---
+
+<!-- 1. Title page -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <h1 id="hero-title" set:html={d.hero.title.replace('open-access', '<span class="nowrap">open-access</span>')} />
+    <div class="hero-row">
+      <p class="hero-sub">{d.hero.sub}</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">{d.hero.ctaPrimary}</a>
+        <a class="btn btn-outline" href="#video">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#09029B" aria-hidden="true"><path d="M7 4l13 8-13 8z"></path></svg>
+          {d.hero.ctaSecondary}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Terminal video (autoplay, muted) -->
+<section id="video" class="video-section" aria-label={d.video.title}>
+  <div class="wrap">
+    <figure>
+      <Video lang={lang} src={VIDEOS.terminal.src} poster={VIDEOS.terminal.poster} label={d.video.title} autoplay variant="terminal" />
+      <figcaption class="video-caption"><strong>{d.video.title}</strong><span>{d.video.caption}</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 3. News and publications -->
+<Section id="news" label={d.labels.news}>
+  <Slider lang={lang} label={d.labels.news}>
+    {news.map((item) => (
+      <article class="news-card">
+        <Media src={item.data.image} alt="" label={nl ? 'Nieuwsfoto' : 'News photo'} />
+        <div class="body">
+          <div class="news-meta">{item.data.dateLabel ?? fmt.format(item.data.date)}, {item.data.type}</div>
+          <h3>{item.data.title}</h3>
+          {item.data.link && <a href={item.data.link}>{item.data.linkLabel ?? d.news.readMore}<span class="sr-only">: {item.data.title}</span></a>}
+        </div>
+      </article>
+    ))}
+  </Slider>
+  <div class="more-links">
+    <a href={url(lang, 'news')}>{d.news.all}</a>
+    <a href={d.contact.linkedin_url}>{d.news.linkedin}</a>
+  </div>
+</Section>
+
+<!-- 4. About SeaSeaS -->
+<Section id="about" label={d.labels.about}>
+  <p class="lead">{d.about.lead}</p>
+  <div class="about-grid">
+    <div><h3>{d.about.missionTitle}</h3><p>{d.about.mission}</p></div>
+    <div><h3>{d.about.whoTitle}</h3><p>{d.about.who}</p></div>
+  </div>
+</Section>
+
+<!-- 5. Why emitters choose SeaSeaS -->
+<Section id="emitters" label={d.labels.emitters}>
+  <p class="lead">{d.emitters.lead}</p>
+  <p class="intro">{d.emitters.intro}</p>
+  <div class="cards">
+    {d.emitters.cards.map((c) => (
+      <div class="card">
+        <img src={picto(c.icon)} alt="" loading="lazy" width="300" height="260" />
+        <h3>{c.title}</h3>
+        <p>{c.text}</p>
+      </div>
+    ))}
+  </div>
+  <dl class="figures">
+    {d.emitters.figures.map((f) => (
+      <div><dt class="sr-only">{f.label}</dt><dd class="figure-value">{f.value}</dd><dd class="figure-label" aria-hidden="true">{f.label}</dd></div>
+    ))}
+  </dl>
+</Section>
+
+<!-- 6. How it works -->
+<Section id="how" label={d.labels.how}>
+  <p class="lead">{d.how.lead}</p>
+  <ol class="steps">
+    {d.how.steps.map((s, i) => (
+      <li class={`step ${stepClass[i]}`}>
+        <span class="num" aria-hidden="true">{i + 1}</span>
+        {stepIcons[i]
+          ? <div class="step-picto"><img src={picto(stepIcons[i]!)} alt="" loading="lazy" /></div>
+          : <div class="step-picto group">{transport.map((m) => <img src={picto(m)} alt="" loading="lazy" />)}</div>}
+        <h3>{s.title}</h3>
+        <p>{s.text}</p>
+      </li>
+    ))}
+  </ol>
+</Section>
+
+<!-- 7. Location -->
+<Section id="location" label={d.labels.location}>
+  <div class="loc-head">
+    <p class="lead">{d.location.lead}</p>
+    <p>{d.location.text}</p>
+  </div>
+  <figure class="loc-video">
+    <Video lang={lang} src={VIDEOS.location.src} poster={VIDEOS.location.poster} label={d.location.videoLabel} variant="location" />
+    <figcaption>
+      <ol class="stages">
+        {d.location.stages.map((s, i) => <li><strong>{i + 1} · {s.title}</strong>{s.text}</li>)}
+      </ol>
+    </figcaption>
+  </figure>
+</Section>
+
+<!-- 8. Project timeline -->
+<Section id="timeline" label={d.labels.timeline}>
+  <p class="lead">{d.timeline.lead}</p>
+  <ol class="timeline">
+    {d.timeline.items.map((it) => (
+      <li class={it.status}>
+        <div class="tl-bar" aria-hidden="true"></div>
+        <div class="tl-when">{it.when}</div>
+        <div class="tl-what">{it.what}</div>
+        {it.status === 'done' && <span class="tag done">{d.timeline.done}</span>}
+        {it.status === 'next' && <span class="tag">{d.timeline.next}</span>}
+      </li>
+    ))}
+  </ol>
+</Section>
+
+<!-- 9. Leadership -->
+<Section id="team" label={d.labels.team}>
+  <Slider lang={lang} label={d.labels.team}>
+    <figure class="person team-photo">
+      <Media src={TEAM_PHOTO} alt={d.team.photoAlt} label={nl ? 'Teamfoto' : 'Team photo'} />
+      <figcaption><h3>{d.team.photoTitle}</h3><p>{d.team.photoText}</p></figcaption>
+    </figure>
+    {team.map((p) => (
+      <div class="person">
+        <Media src={p.data.photo} alt={p.data.name} label={nl ? 'Portret' : 'Portrait'} />
+        <h3>{p.data.name}</h3>
+        <p>{nl ? p.data.role_nl : p.data.role_en}</p>
+        {p.data.linkedin && <a href={p.data.linkedin}>LinkedIn<span class="sr-only">: {p.data.name}</span></a>}
+      </div>
+    ))}
+  </Slider>
+</Section>
+
+<!-- 10. Contact -->
+<section id="contact" class="contact" aria-labelledby="contact-label">
+  <div class="contact-panel">
+    <h2 class="rh" id="contact-label">{d.labels.contact}</h2>
+    <p class="contact-title">{d.contact.title}</p>
+    <p>{d.contact.text}</p>
+    <address>
+      {d.contact.address.map((l) => <>{l}<br /></>)}
+      <a href={`mailto:${d.contact.email_address}`}>{d.contact.email_address}</a><br />
+      <a href={d.contact.linkedin_url}>LinkedIn</a>
+    </address>
+  </div>
+  <form class="contact-form" name="contact" method="POST"
+    action={FORM_ACTION || (nl ? '/nl/?verzonden=1#contact' : '/?sent=1#contact')}
+    data-netlify={netlify ? 'true' : undefined} netlify-honeypot={netlify ? 'company-website' : undefined}>
+    {netlify && <input type="hidden" name="form-name" value="contact" />}
+    <input type="hidden" name="language" value={lang} />
+    <p class="hidden"><label>Leave empty <input name="company-website" tabindex="-1" autocomplete="off" /></label></p>
+    <label class="field">{d.contact.name}<input type="text" name="name" autocomplete="name" required /></label>
+    <label class="field">{d.contact.company}<input type="text" name="company" autocomplete="organization" /></label>
+    <label class="field">{d.contact.email}<input type="email" name="email" autocomplete="email" required /></label>
+    <label class="field">{d.contact.message}<textarea name="message" rows="3" required></textarea></label>
+    <label class="consent"><input type="checkbox" name="consent" required />{d.contact.consent}</label>
+    <button class="btn btn-primary" type="submit">{d.contact.send}</button>
+    <p class="hidden" role="status" data-thanks>{d.contact.thanks}</p>
+  </form>
+</section>
+
+<script>
+  // Show the thank-you line after a successful form submission redirect.
+  if (/[?&](sent|verzonden)=1/.test(location.search)) {
+    document.querySelector('[data-thanks]')?.classList.remove('hidden');
+  }
+</script>

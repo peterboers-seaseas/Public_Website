@@ -1,0 +1,142 @@
+// Nederlandse teksten. Zelfde structuur als en.ts. Conceptvertaling: graag laten nalezen.
+export default {
+  lang: 'nl',
+  meta: {
+    title: 'SeaSeaS | Open-access CO₂-exportterminal, Haven Amsterdam',
+    description:
+      'SeaSeaS ontwikkelt een open-access terminal voor vloeibare CO₂ in de Haven van Amsterdam: aanvoer per pijpleiding, vrachtwagen, spoor en binnenvaart, afvoer per schip naar opslag onder de Noordzee. Operationeel vanaf 2030.',
+  },
+  nav: {
+    news: 'Nieuws',
+    about: 'Over ons',
+    emitters: 'Voor emittenten',
+    how: 'Zo werkt het',
+    location: 'Locatie',
+    team: 'Team',
+    contact: 'Neem contact op',
+    menu: 'Menu',
+    close: 'Sluiten',
+    switchTo: 'EN',
+    switchLabel: 'English version',
+  },
+  hero: {
+    title: 'De open-access terminal voor afgevangen CO₂ in Amsterdam',
+    sub: 'Aanvoer per pijpleiding, vrachtwagen, spoor en binnenvaart. Afvoer per schip naar opslag onder de Noordzee. Vanaf 2030 met ~1,0 Mtpa, ontworpen om te groeien naar ~3,5 Mtpa.',
+    ctaPrimary: 'Neem contact op',
+    ctaSecondary: 'Bekijk de terminal',
+  },
+  video: {
+    title: 'De terminal (fase 1) in 3D',
+    caption: 'Lossen van trein, vrachtwagen en binnenvaartschip, buffertanks en het beladen van schepen.',
+    pause: 'Video pauzeren',
+    play: 'Video afspelen',
+    soundOn: 'Geluid aan',
+    soundOff: 'Geluid uit',
+  },
+  labels: {
+    news: 'Nieuws en publicaties',
+    about: 'Over SeaSeaS',
+    emitters: 'Voor emittenten',
+    how: 'Zo werkt het',
+    location: 'Locatie',
+    timeline: 'Projectplanning',
+    team: 'Directie',
+    contact: 'Contact',
+  },
+  slider: { prev: 'Vorige', next: 'Volgende' },
+  news: {
+    readMore: 'Lees meer',
+    all: 'Alle nieuws en publicaties',
+    linkedin: 'SeaSeaS op LinkedIn',
+  },
+  about: {
+    lead: 'Wij bouwen de CO₂-logistiek die emittenten in het achterland niet alleen kunnen realiseren. Ons eerste project is een gedeelde exportterminal in de Haven van Amsterdam, open voor iedere gekwalificeerde emittent onder dezelfde voorwaarden.',
+    missionTitle: 'Missie',
+    mission:
+      'Industriële emittenten helpen een werkende CO₂-keten op te zetten: van afvang op hun eigen locatie tot permanente opslag onder de Noordzee.',
+    whoTitle: 'Wie we zijn',
+    who: 'Opgericht door Kees van Seventer en Peter Boers. Exolum werd in 2026 minderheidsaandeelhouder.',
+  },
+  emitters: {
+    lead: 'Waarom emittenten kiezen voor SeaSeaS',
+    intro:
+      'Een terminal die vroeg kan starten en meegroeit met de vraag, zodat uw afvangproject niet hoeft te wachten op infrastructuur die er nog niet is.',
+    cards: [
+      { icon: 'rail', title: 'Multimodale aanvoer', text: 'Lever aan per pijpleiding, vrachtwagen, spoor of binnenvaart. Begin met de modaliteit die past bij uw volume en locatie.' },
+      { icon: 'sink', title: 'Meerdere opslaglocaties', text: 'Verscheping naar Northern Lights en andere opslaglocaties in de Noordzee. Geen afhankelijkheid van één operator.' },
+      { icon: 'terminal', title: 'Schaalbare capaciteit', text: 'Fase 1 start in 2030 met ~1,0 Mtpa en is ontworpen voor uitbreiding naar ~3,5 Mtpa.' },
+      { icon: 'bullet', title: 'Minder project-op-projectrisico', text: 'Een investeringsbesluit op ~1,0 Mtpa betekent dat u niet afhankelijk bent van een hoofdleiding of één opslagproject.' },
+    ],
+    figures: [
+      { value: '~1,0', label: 'Mtpa startcapaciteit, 2030' },
+      { value: '~3,5', label: 'Mtpa bij volledige uitbouw' },
+      { value: '4', label: 'Aanvoermodaliteiten' },
+      { value: 'Q3 2028', label: 'Beoogd investeringsbesluit' },
+    ],
+  },
+  how: {
+    lead: 'Van uw fabriek naar permanente opslag in vijf stappen',
+    steps: [
+      { title: 'Emittent', text: 'U vangt CO₂ af en maakt het vloeibaar op uw locatie.' },
+      { title: 'Transport', text: 'Per pijpleiding, vrachtwagen, spoor of binnenvaart naar Amsterdam.' },
+      { title: 'SeaSeaS-terminal', text: 'Lossen, kwaliteitscontrole, bufferopslag en conditionering.' },
+      { title: 'Schip', text: 'Belading van speciale CO₂-tankers.' },
+      { title: 'Opslag op zee', text: 'Permanente opslag in de Noordzee, bijvoorbeeld bij Northern Lights.' },
+    ],
+  },
+  location: {
+    lead: 'BioPark, Australiëhaven, Haven Amsterdam',
+    text: 'Een locatie van ~6 ha met diepwatertoegang via IJmuiden, spoor- en vaarwegverbindingen met het Nederlandse en Duitse achterland en pijpleidingbereik binnen het Amsterdamse havencluster.',
+    videoLabel: 'Locatievideo: van de SeaSeaS-locatie naar West-Europa',
+    stages: [
+      { title: 'Locatie', text: 'BioPark-kavel en kade, Australiëhaven' },
+      { title: 'Haven en regio', text: 'Noordzeekanaal, IJmuiden, spoor- en vaarwegverbindingen' },
+      { title: 'West-Europa', text: 'Duits achterland en opslaglocaties in de Noordzee' },
+    ],
+  },
+  timeline: {
+    lead: 'Op koers voor de eerste CO₂ in 2030',
+    done: 'Afgerond',
+    next: 'Volgende',
+    items: [
+      { when: '2026', what: 'Pre-FEED', status: 'done' },
+      { when: 'Begin 2027', what: 'Start FEED', status: 'next' },
+      { when: 'Q3 2028', what: 'Investeringsbesluit', status: '' },
+      { when: '2028–2030', what: 'Bouw', status: '' },
+      { when: '2030', what: 'Start operatie, ~1,0 Mtpa', status: '' },
+      { when: '[Jaar n.t.b.]', what: 'Uitbreiding naar ~3,5 Mtpa', status: '' },
+    ],
+  },
+  team: {
+    photoTitle: 'Het SeaSeaS-team',
+    photoText: 'Havenlogistiek, gasbehandeling en infrastructuurfinanciering onder één dak.',
+    photoAlt: 'Het SeaSeaS-team',
+  },
+  contact: {
+    title: 'Plan uw CO₂-route met ons',
+    text: 'Deel uw locatie, verwachte volumes en startdatum. Wij brengen de transport- en opslagopties voor u in kaart.',
+    name: 'Naam',
+    company: 'Bedrijf',
+    email: 'E-mail',
+    message: 'Bericht',
+    consent: 'Ik ga ermee akkoord dat SeaSeaS mijn gegevens bewaart om deze aanvraag te beantwoorden, zoals beschreven in de privacyverklaring.',
+    send: 'Verstuur bericht',
+    thanks: 'Dank u wel. We nemen spoedig contact met u op.',
+    address: ['SeaSeaS', '[Straat en huisnummer]', '[Postcode] Amsterdam'],
+    email_address: 'info@seaseas.nl',
+    linkedin_url: 'https://www.linkedin.com/company/seaseas',
+  },
+  footer: {
+    privacy: 'Privacyverklaring',
+    cookies: 'Cookies',
+    disclaimer: 'Disclaimer',
+  },
+  legal: {
+    placeholder: 'Op deze pagina komt de [TITLE] van SeaSeaS. Tekst volgt.',
+    back: 'Terug naar de homepage',
+  },
+  notFound: {
+    title: 'Pagina niet gevonden',
+    text: 'De pagina die u zoekt bestaat niet of is verplaatst.',
+  },
+};

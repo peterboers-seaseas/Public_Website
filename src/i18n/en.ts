@@ -1,0 +1,142 @@
+// All English page copy. The Dutch file (nl.ts) has exactly the same structure.
+export default {
+  lang: 'en',
+  meta: {
+    title: 'SeaSeaS | Open-access CO₂ export terminal, Port of Amsterdam',
+    description:
+      'SeaSeaS is developing an open-access liquid CO₂ export terminal in the Port of Amsterdam: pipeline, truck, rail and barge in, ships to North Sea storage out. Operational from 2030.',
+  },
+  nav: {
+    news: 'News',
+    about: 'About',
+    emitters: 'For emitters',
+    how: 'How it works',
+    location: 'Location',
+    team: 'Team',
+    contact: 'Get in touch',
+    menu: 'Menu',
+    close: 'Close',
+    switchTo: 'NL',
+    switchLabel: 'Nederlandse versie',
+  },
+  hero: {
+    title: 'Amsterdam’s open-access terminal for captured CO₂',
+    sub: 'Pipeline, truck, rail and barge in. Ships to North Sea storage out. Opening in 2030 at ~1.0 Mtpa, designed to grow to ~3.5 Mtpa.',
+    ctaPrimary: 'Get in touch',
+    ctaSecondary: 'Watch the terminal',
+  },
+  video: {
+    title: 'The Phase 1 terminal in 3D',
+    caption: 'Unloading for rail, truck and barge, buffer tanks and ship loading.',
+    pause: 'Pause video',
+    play: 'Play video',
+    soundOn: 'Sound on',
+    soundOff: 'Sound off',
+  },
+  labels: {
+    news: 'News and publications',
+    about: 'About SeaSeaS',
+    emitters: 'For emitters',
+    how: 'How it works',
+    location: 'Location',
+    timeline: 'Project timeline',
+    team: 'Leadership',
+    contact: 'Contact',
+  },
+  slider: { prev: 'Previous', next: 'Next' },
+  news: {
+    readMore: 'Read more',
+    all: 'All news and publications',
+    linkedin: 'SeaSeaS on LinkedIn',
+  },
+  about: {
+    lead: 'We build the CO₂ logistics that inland emitters can’t build alone. Our first project is a shared export terminal in the Port of Amsterdam, open to every qualifying emitter on the same terms.',
+    missionTitle: 'Mission',
+    mission:
+      'Help industrial emitters build a workable CO₂ supply chain, from capture at their site to permanent storage under the North Sea.',
+    whoTitle: 'Who we are',
+    who: 'Founded by Kees van Seventer and Peter Boers. Exolum joined as minority shareholder in 2026.',
+  },
+  emitters: {
+    lead: 'Why emitters choose SeaSeaS',
+    intro:
+      'A terminal sized to start early and grow with demand, so your capture project is not waiting on infrastructure that isn’t there yet.',
+    cards: [
+      { icon: 'rail', title: 'Multi-modal access', text: 'Deliver by pipeline, truck, rail or barge. Start with the modality that fits your volume and location.' },
+      { icon: 'sink', title: 'Multiple storage sinks', text: 'Ship to Northern Lights and other North Sea storage sites. No lock-in to one operator.' },
+      { icon: 'terminal', title: 'Scalable capacity', text: 'Phase 1 starts at ~1.0 Mtpa in 2030 and is designed to expand to ~3.5 Mtpa.' },
+      { icon: 'bullet', title: 'Less project-on-project risk', text: 'FID on ~1.0 Mtpa means you don’t depend on a trunk pipeline or a single storage project being ready.' },
+    ],
+    figures: [
+      { value: '~1.0', label: 'Mtpa launch capacity, 2030' },
+      { value: '~3.5', label: 'Mtpa at full build-out' },
+      { value: '4', label: 'Inbound modalities' },
+      { value: 'Q3 2028', label: 'Target investment decision' },
+    ],
+  },
+  how: {
+    lead: 'From your plant to permanent storage in five steps',
+    steps: [
+      { title: 'Emitter', text: 'You capture and liquefy CO₂ at your site.' },
+      { title: 'Transport', text: 'Pipeline, truck, rail or barge to Amsterdam.' },
+      { title: 'SeaSeaS terminal', text: 'Unloading, quality checks, buffer storage and conditioning.' },
+      { title: 'Ship', text: 'Loading onto dedicated CO₂ carriers.' },
+      { title: 'Offshore storage', text: 'Permanent storage in North Sea sinks such as Northern Lights.' },
+    ],
+  },
+  location: {
+    lead: 'BioPark, Australiëhaven, Port of Amsterdam',
+    text: 'A ~6 ha site with deep-water access via IJmuiden, rail and barge links to the Dutch and German hinterland, and pipeline reach into the Amsterdam port cluster.',
+    videoLabel: 'Location video: from the SeaSeaS site to Western Europe',
+    stages: [
+      { title: 'Site', text: 'BioPark plot and quay, Australiëhaven' },
+      { title: 'Port and region', text: 'North Sea Canal, IJmuiden, rail and barge links' },
+      { title: 'Western Europe', text: 'German hinterland and North Sea storage sites' },
+    ],
+  },
+  timeline: {
+    lead: 'On track for first CO₂ in 2030',
+    done: 'Completed',
+    next: 'Next',
+    items: [
+      { when: '2026', what: 'Pre-FEED', status: 'done' },
+      { when: 'Early 2027', what: 'FEED starts', status: 'next' },
+      { when: 'Q3 2028', what: 'Investment decision', status: '' },
+      { when: '2028–2030', what: 'Construction', status: '' },
+      { when: '2030', what: 'Operations start, ~1.0 Mtpa', status: '' },
+      { when: '[Year TBC]', what: 'Build-out to ~3.5 Mtpa', status: '' },
+    ],
+  },
+  team: {
+    photoTitle: 'The SeaSeaS team',
+    photoText: 'Port logistics, gas handling and infrastructure finance under one roof.',
+    photoAlt: 'The SeaSeaS team',
+  },
+  contact: {
+    title: 'Plan your CO₂ route with us',
+    text: 'Share your location, expected volumes and start date. We’ll map the transport and storage options.',
+    name: 'Name',
+    company: 'Company',
+    email: 'Email',
+    message: 'Message',
+    consent: 'I agree that SeaSeaS stores my details to answer this request, as set out in the privacy statement.',
+    send: 'Send message',
+    thanks: 'Thank you. We’ll be in touch shortly.',
+    address: ['SeaSeaS', '[Street and number]', '[Postcode] Amsterdam, the Netherlands'],
+    email_address: 'info@seaseas.nl',
+    linkedin_url: 'https://www.linkedin.com/company/seaseas',
+  },
+  footer: {
+    privacy: 'Privacy statement',
+    cookies: 'Cookies',
+    disclaimer: 'Disclaimer',
+  },
+  legal: {
+    placeholder: 'This page will contain the SeaSeaS [TITLE]. Text to be supplied.',
+    back: 'Back to the homepage',
+  },
+  notFound: {
+    title: 'Page not found',
+    text: 'The page you are looking for does not exist or has moved.',
+  },
+};

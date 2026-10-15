@@ -1,0 +1,18 @@
+---
+// Placeholder legal page. Replace the paragraph with the real text when it is available.
+import Base from '../layouts/Base.astro';
+import { t, url, type Lang } from '../i18n';
+interface Props { lang: Lang; page: 'privacy' | 'cookies' | 'disclaimer' }
+const { lang, page } = Astro.props;
+const d = t(lang);
+const title = d.footer[page];
+---
+<Base lang={lang} title={title} page={page}>
+  <section class="simple">
+    <div class="wrap">
+      <h1>{title}</h1>
+      <p>{d.legal.placeholder.replace('[TITLE]', title.toLowerCase())}</p>
+      <p><a href={url(lang)}>{d.legal.back}</a></p>
+    </div>
+  </section>
+</Base>

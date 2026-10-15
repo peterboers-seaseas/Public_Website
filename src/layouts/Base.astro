@@ -1,0 +1,54 @@
+---
+import '@fontsource/be-vietnam-pro/300.css';
+import '@fontsource/be-vietnam-pro/400.css';
+import '@fontsource/be-vietnam-pro/500.css';
+import '@fontsource/be-vietnam-pro/600.css';
+import '@fontsource/be-vietnam-pro/700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { t, url, otherLang, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  title?: string;
+  description?: string;
+  page?: string; // e.g. 'privacy'; empty for the homepage
+}
+const { lang, title, description, page = '' } = Astro.props;
+const d = t(lang);
+const pageTitle = title ? `${title} | SeaSeaS` : d.meta.title;
+const desc = description ?? d.meta.description;
+const site = Astro.site ?? new URL('https://www.seaseas.nl');
+const canonical = new URL(url(lang, page), site).href;
+const alternate = new URL(url(otherLang(lang), page), site).href;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={otherLang(lang)} href={alternate} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#09029B" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/logo.png', site).href} />
+    <meta property="og:locale" content={lang === 'nl' ? 'nl_NL' : 'en_GB'} />
+  </head>
+  <body>
+    <a class="skip" href="#main">{lang === 'nl' ? 'Naar de inhoud' : 'Skip to content'}</a>
+    <Header lang={lang} page={page} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

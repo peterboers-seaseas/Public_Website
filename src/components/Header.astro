@@ -1,0 +1,44 @@
+---
+import { t, url, otherLang, type Lang } from '../i18n';
+interface Props { lang: Lang; page?: string }
+const { lang, page = '' } = Astro.props;
+const d = t(lang);
+const home = url(lang);
+// On the homepage anchors scroll in place; on other pages they lead back to the homepage section.
+const a = (id: string) => (page ? `${home}#${id}` : `#${id}`);
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href={home} aria-label="SeaSeaS home">
+      <img src="/images/logo.png" alt="SeaSeaS" width="607" height="123" />
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-btn
+      data-open={d.nav.menu} data-close={d.nav.close}>{d.nav.menu}</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href={a('news')}>{d.nav.news}</a>
+      <a href={a('about')}>{d.nav.about}</a>
+      <a href={a('emitters')}>{d.nav.emitters}</a>
+      <a href={a('how')}>{d.nav.how}</a>
+      <a href={a('location')}>{d.nav.location}</a>
+      <a href={a('team')}>{d.nav.team}</a>
+      <a href={url(otherLang(lang), page)} hreflang={otherLang(lang)} lang={otherLang(lang)} aria-label={d.nav.switchLabel}>
+        {lang === 'en' ? <span><strong>EN</strong> | NL</span> : <span>EN | <strong>NL</strong></span>}
+      </a>
+      <a class="nav-cta" href={a('contact')}>{d.nav.contact}</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('[data-menu-btn]');
+  const nav = document.getElementById('site-nav');
+  if (btn && nav) {
+    const set = (open: boolean) => {
+      nav.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? btn.dataset.close! : btn.dataset.open!;
+    };
+    btn.addEventListener('click', () => set(!nav.classList.contains('open')));
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => set(false)));
+  }
+</script>

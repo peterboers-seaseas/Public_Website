@@ -1,0 +1,12 @@
+---
+// The two-column section: title under a rule on the left, content on the right.
+interface Props { id: string; label: string }
+const { id, label } = Astro.props;
+const headingId = `${id}-label`;
+---
+<section id={id} class="section" aria-labelledby={headingId}>
+  <div class="wrap two-col">
+    <h2 class="rh" id={headingId}>{label}</h2>
+    <div class="col"><slot /></div>
+  </div>
+</section>

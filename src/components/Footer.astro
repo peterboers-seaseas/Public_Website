@@ -1,0 +1,23 @@
+---
+import { t, url, otherLang, type Lang } from '../i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const home = url(lang);
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="/images/logo-white.png" alt="SeaSeaS" width="607" height="124" />
+    <nav class="footer-nav" aria-label="Footer">
+      <a href={`${home}#news`}>{d.nav.news}</a>
+      <a href={`${home}#about`}>{d.nav.about}</a>
+      <a href={`${home}#emitters`}>{d.nav.emitters}</a>
+      <a href={`${home}#contact`}>{d.labels.contact}</a>
+      <a class="legal" href={url(lang, 'privacy')}>{d.footer.privacy}</a>
+      <a class="legal" href={url(lang, 'cookies')}>{d.footer.cookies}</a>
+      <a class="legal" href={url(lang, 'disclaimer')}>{d.footer.disclaimer}</a>
+      <a href={url(otherLang(lang))} hreflang={otherLang(lang)} aria-label={d.nav.switchLabel}><strong>EN | NL</strong></a>
+    </nav>
+    <span class="copyright">© {new Date().getFullYear()} SeaSeaS</span>
+  </div>
+</footer>
