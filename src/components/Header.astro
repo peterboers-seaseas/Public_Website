@@ -1,5 +1,5 @@
 ---
-import { t, url, otherLang, type Lang } from '../i18n';
+import { t, url, otherLang, withBase, type Lang } from '../i18n';
 interface Props { lang: Lang; page?: string }
 const { lang, page = '' } = Astro.props;
 const d = t(lang);
@@ -10,7 +10,7 @@ const a = (id: string) => (page ? `${home}#${id}` : `#${id}`);
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href={home} aria-label="SeaSeaS home">
-      <img src="/images/logo.png" alt="SeaSeaS" width="607" height="123" />
+      <img src={withBase('/images/logo.png')} alt="SeaSeaS" width="607" height="123" />
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-btn
       data-open={d.nav.menu} data-close={d.nav.close}>{d.nav.menu}</button>

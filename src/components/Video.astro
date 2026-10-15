@@ -3,13 +3,13 @@
 // Visitors with "reduce motion" switched on see the poster frame instead.
 import fs from 'node:fs';
 import path from 'node:path';
-import { t, type Lang } from '../i18n';
+import { t, withBase, type Lang } from '../i18n';
 interface Props { lang: Lang; src: string; poster?: string; label: string; autoplay?: boolean; variant?: 'terminal' | 'location' }
 const { lang, src, poster, label, autoplay = false, variant = 'terminal' } = Astro.props;
 const d = t(lang);
 const has = (p?: string) => !!p && fs.existsSync(path.join(process.cwd(), 'public', p));
 const hasVideo = has(src);
-const posterSrc = has(poster) ? poster : undefined;
+const posterSrc = has(poster) ? withBase(poster!) : undefined;
 const pauseIcon = '<path d="M6 4h4v16H6zM14 4h4v16h-4z"></path>';
 const playIcon = '<path d="M8 5l12 7-12 7z"></path>';
 ---
@@ -17,7 +17,7 @@ const playIcon = '<path d="M8 5l12 7-12 7z"></path>';
   data-l-pause={d.video.pause} data-l-play={d.video.play} data-l-on={d.video.soundOn} data-l-off={d.video.soundOff}
   data-i-pause={pauseIcon} data-i-play={playIcon}>
   {hasVideo
-    ? <video src={src} poster={posterSrc} muted loop={autoplay} playsinline preload={autoplay ? 'auto' : 'metadata'} autoplay={autoplay} aria-label={label}></video>
+    ? <video src={withBase(src)} poster={posterSrc} muted loop={autoplay} playsinline preload={autoplay ? 'auto' : 'metadata'} autoplay={autoplay} aria-label={label}></video>
     : <div class="video-ph">[{label}{autoplay ? (lang === 'nl' ? ': speelt automatisch af, zonder geluid' : ': plays automatically, muted') : ''}]</div>}
 
   {!autoplay && (

@@ -4,7 +4,7 @@ import Section from './Section.astro';
 import Slider from './Slider.astro';
 import Video from './Video.astro';
 import Media from './Media.astro';
-import { t, url, type Lang } from '../i18n';
+import { t, url, withBase, type Lang } from '../i18n';
 import { VIDEOS, TEAM_PHOTO, FORM_ACTION } from '../config';
 
 interface Props { lang: Lang }
@@ -17,7 +17,7 @@ const news = (await getCollection('news', (e) => e.id.startsWith(`${lang}/`) && 
 const team = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
 const fmt = new Intl.DateTimeFormat(nl ? 'nl-NL' : 'en-GB', { month: 'long', year: 'numeric' });
 
-const picto = (name: string) => `/images/pictograms/${name}.png`;
+const picto = (name: string) => withBase(`/images/pictograms/${name}.png`);
 const stepIcons = ['emitter', null, 'terminal', 'vessel', 'sink'];
 const stepClass = ['', '', 'is-terminal', '', 'is-storage'];
 const transport = ['pipeline', 'truck', 'rail', 'barge'];
@@ -180,7 +180,7 @@ const netlify = !FORM_ACTION;
     </address>
   </div>
   <form class="contact-form" name="contact" method="POST"
-    action={FORM_ACTION || (nl ? '/nl/?verzonden=1#contact' : '/?sent=1#contact')}
+    action={FORM_ACTION || (nl ? `${url('nl')}?verzonden=1#contact` : `${url('en')}?sent=1#contact`)}
     data-netlify={netlify ? 'true' : undefined} netlify-honeypot={netlify ? 'company-website' : undefined}>
     {netlify && <input type="hidden" name="form-name" value="contact" />}
     <input type="hidden" name="language" value={lang} />
