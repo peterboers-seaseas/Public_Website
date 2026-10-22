@@ -23,7 +23,7 @@ export default {
   hero: {
     title: 'Ready to connect emitters to North Sea CO₂ storage in 2030',
     sub1: 'SeaSeaS is developing a strategic CO₂ export terminal in the Port of Amsterdam, with access to multiple North Sea sinks.',
-    sub2: 'Deep-water access and rail, road and barge connections give emitters without a pipeline a route to storage for their captured CO₂.',
+    sub2: 'Deep-water access and pipeline, rail, road and barge connections give emitters a route to storage for their captured CO₂.',
     ctaPrimary: 'Get in touch',
     ctaSecondary: 'Watch the terminal',
   },

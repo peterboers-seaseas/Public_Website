@@ -22,7 +22,7 @@ export default {
   hero: {
     title: 'Klaar om emittenten in 2030 te verbinden met CO₂-opslag onder de Noordzee',
     sub1: 'SeaSeaS ontwikkelt een strategische CO₂-exportterminal in de haven van Amsterdam, met toegang tot meerdere opslaglocaties onder de Noordzee.',
-    sub2: 'Diepwatertoegang en verbindingen via spoor, weg en binnenvaart geven emittenten zonder pijpleiding een route naar opslag voor hun afgevangen CO₂.',
+    sub2: 'Diepwatertoegang en verbindingen via pijpleiding, spoor, weg en binnenvaart geven emittenten een route naar opslag voor hun afgevangen CO₂.',
     ctaPrimary: 'Neem contact op',
     ctaSecondary: 'Bekijk de terminal',
   },
