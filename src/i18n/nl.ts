@@ -82,7 +82,7 @@ export default {
     cards: [
       { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten, onder gelijke voorwaarden. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
       { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Verscheep naar verschillende opslaglocaties onder de Noordzee zodra die beschikbaar komen, in plaats van uw project te binden aan één transport- en opslagketen.' },
-      { icon: 'terminal', title: 'Schaalbare capaciteit', text: 'Begin met de volumes die u nu heeft en groei mee in de tijd. De terminal start rond 1 Mtpa in 2030 en is ontworpen om te groeien naar 3,5 Mtpa.' },
+      { icon: 'terminal', title: 'Schaalbare capaciteit', text: 'Met een start rond 1 Mtpa in 2030 ligt het investeringsbesluit binnen bereik van enkele eerste klanten. De terminal is ontworpen om mee te groeien naar 3,5 Mtpa naarmate de vraag toeneemt.' },
       { icon: 'bullet', title: 'Minder afhankelijk van andere projecten', text: 'Loopt andere CO₂-infrastructuur vertraging op? Dan biedt SeaSeaS uw afvanginstallatie een alternatieve route naar opslag. Start eerder en wees minder afhankelijk van één pijpleiding of opslagproject.' },
     ],
   },
