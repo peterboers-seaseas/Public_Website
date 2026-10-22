@@ -445,3 +445,21 @@ button { font: inherit; cursor: pointer; }
 /* Smaller "Read the article" links */
 .card-link { font-size: 14px; }
 @media (max-width: 900px) { .card-link { font-size: 13px; } }
+
+/* Leadership cards with a LinkedIn profile: same hover as the news cards; the whole card opens LinkedIn */
+.person.linked { background: var(--white); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.person.linked:hover, .person.linked:focus-within { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(9, 2, 155, 0.12); border-color: var(--periwinkle); }
+.person.linked .media { transition: transform 0.4s ease; }
+.person.linked:hover .media { transform: scale(1.05); }
+.person.linked h3 { transition: color 0.2s ease; }
+.person.linked:hover h3, .person.linked:focus-within h3 { color: var(--electric); }
+.person-link::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.person-link svg { transition: fill 0.2s ease; }
+.person.linked:hover .person-link svg { fill: var(--electric); }
+.person-link:focus-visible { outline: none; }
+.person.linked:has(.person-link:focus-visible) { outline: 3px solid var(--electric); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .person.linked, .person.linked .media { transition: none; }
+  .person.linked:hover, .person.linked:focus-within { transform: none; }
+  .person.linked:hover .media { transform: none; }
+}
