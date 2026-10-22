@@ -106,8 +106,10 @@ button { font: inherit; cursor: pointer; }
 .slider::-webkit-scrollbar-track { background: var(--pale-mint); border-radius: 3px; }
 .slider::-webkit-scrollbar-thumb { background: var(--periwinkle); border-radius: 3px; }
 .more-links { margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; font-weight: 600; }
-.more-links .news-li { width: 52px; height: 52px; margin: 0; border-radius: var(--radius); }
-.more-links .news-li:hover { background: var(--pale-mint); }
+.more-links .btn { min-height: 40px; height: 40px; padding: 0 18px; font-size: 15px; }
+.more-links .news-li { width: 40px; height: 40px; margin: 0; border-radius: var(--radius); }
+.more-links .news-li svg { display: block; }
+.more-links .news-li:hover { opacity: 0.8; }
 
 .ph { background: var(--lavender); color: var(--ultramarine); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 13px; padding: 0 16px; }
 
