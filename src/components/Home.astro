@@ -30,8 +30,11 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
   <picture>
     <source media="(max-width: 900px)" type="image/webp" srcset={withBase('/images/terminal-3d-1100.webp')} />
     <source media="(max-width: 900px)" srcset={withBase('/images/terminal-3d-1100.jpg')} />
-    <source type="image/webp" srcset={withBase('/images/terminal-3d-full.webp')} />
-    <img class="hero-bg" src={withBase('/images/terminal-3d-full.jpg')} alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+    <source type="image/webp" sizes="100vw"
+      srcset={`${withBase('/images/terminal-3d-2560.webp')} 2560w, ${withBase('/images/terminal-3d-3840.webp')} 3840w`} />
+    <img class="hero-bg" src={withBase('/images/terminal-3d-2560.jpg')} sizes="100vw"
+      srcset={`${withBase('/images/terminal-3d-2560.jpg')} 2560w, ${withBase('/images/terminal-3d-3840.jpg')} 3840w`}
+      alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
   </picture>
   <div class="hero-fade" aria-hidden="true"></div>
   <div class="wrap">
