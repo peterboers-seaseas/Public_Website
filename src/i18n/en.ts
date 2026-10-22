@@ -70,7 +70,7 @@ export default {
   },
   about: {
     headline: 'Pioneering CO₂ logistics',
-    body: 'Founders Kees van Seventer and Peter Boers identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the specialised storage and handling of gases like CO₂. This unique niche, combined with their background, compelled them to act. Today, with Exolum as minority shareholder, SeaSeaS is a growing team putting that experience to work for emitters.',
+    body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act. Today, with Exolum as minority shareholder, SeaSeaS is a growing team putting that experience to work for emitters.',
     cols: [
       { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain. By developing critical supply chains for emitters to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
       { title: 'Approach', text: 'Supply chains need critical infrastructure. We develop and support solutions for industrial (inland) emitters navigating complex CO₂ supply chain challenges. Essential CO₂ infrastructure is required to bridge existing gaps and ensure that these supply chains operate effectively.' },
