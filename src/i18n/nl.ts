@@ -78,7 +78,7 @@ export default {
   },
   emitters: {
     lead: 'Waarom emittenten voor SeaSeaS kiezen',
-    intro: 'Flexibiliteit in transport, opslagbestemming en timing, zodat u een haalbare route voor uw CO₂ kunt opzetten, ook voordat andere infrastructuur gereed is.',
+    intro: 'Flexibiliteit in aanvoermodaliteit, opslagbestemming en timing, zodat u een haalbare route voor uw CO₂ kunt opzetten.',
     cards: [
       { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten, onder gelijke voorwaarden. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
       { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Verscheep naar verschillende opslaglocaties onder de Noordzee zodra die beschikbaar komen, in plaats van uw project te binden aan één transport- en opslagketen.' },
