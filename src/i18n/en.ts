@@ -79,7 +79,7 @@ export default {
   },
   emitters: {
     lead: 'Why emitters choose SeaSeaS',
-    intro: 'Flexibility in inbound transport modality, storage destination and timing, so you can build a feasible route for your CO₂.',
+    intro: 'Flexibility in inbound transport modality, storage destination and timing, so you can build a feasible export route for your CO₂.',
     cards: [
       { icon: 'rail', title: 'Multimodal access', text: 'Open to all emitters on equal terms. Deliver your liquid CO₂ by barge, rail, truck or cryogenic pipeline, whether or not your site is connected to a CO₂ pipeline network.' },
       { icon: 'sink', title: 'Keep your storage options open', text: 'Ship to a range of North Sea storage sites as they come online, instead of tying your project to a single transport and storage chain.' },
