@@ -474,3 +474,8 @@ button { font: inherit; cursor: pointer; }
 
 .footer-logo { display: inline-flex; }
 .footer-logo:hover { opacity: 0.85; }
+
+.about-logo { display: inline-block; margin-top: 14px; }
+.about-logo img { width: 140px; height: auto; }
+.about-logo:hover { opacity: 0.8; }
+@media (max-width: 900px) { .about-logo img { width: 120px; } }

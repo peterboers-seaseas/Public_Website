@@ -92,7 +92,17 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
   <p class="lead" set:html={co2(d.about.headline)} />
   <p class="about-body" set:html={co2(d.about.body)} />
   <div class="about-grid">
-    {d.about.cols.map((c) => <div><h3>{c.title}</h3><p set:html={co2(c.text)} /></div>)}
+    {d.about.cols.map((c: { title: string; text: string; logo?: string; link?: string }) => (
+      <div>
+        <h3>{c.title}</h3>
+        <p set:html={co2(c.text)} />
+        {c.logo && c.link && (
+          <a class="about-logo" href={c.link} target="_blank" rel="noopener" aria-label={`${c.title} website`}>
+            <img src={withBase(c.logo)} alt={c.title} width="140" height="36" loading="lazy" />
+          </a>
+        )}
+      </div>
+    ))}
   </div>
 </Section>
 

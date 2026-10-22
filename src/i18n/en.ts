@@ -70,10 +70,10 @@ export default {
   },
   about: {
     headline: 'Pioneering CO₂ logistics',
-    body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act. Today, with Exolum as minority shareholder, SeaSeaS is a growing team putting that experience to work for emitters.',
+    body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act.',
     cols: [
       { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain. By developing critical supply chains for emitters to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
-      { title: 'Approach', text: 'Supply chains need critical infrastructure. We develop and support solutions for industrial (inland) emitters navigating complex CO₂ supply chain challenges. Essential CO₂ infrastructure is required to bridge existing gaps and ensure that these supply chains operate effectively.' },
+      { title: 'Exolum', text: 'Exolum joined SeaSeaS as minority shareholder in 2026. It brings experience in developing and operating large-scale logistics infrastructure, and expertise in storing and transporting liquid products, supporting a safe terminal that can expand as demand grows.', logo: '/images/news/exolum-logo.png', link: 'https://exolum.com/' },
       { title: 'Export Terminal', text: 'An open-access, multimodal terminal in the Port of Amsterdam, receiving CO₂ by barge, truck, rail or pipeline and shipping it to North Sea storage. Designed for up to 3.5 Mtpa, with operations expected from 2030.' },
     ],
   },
