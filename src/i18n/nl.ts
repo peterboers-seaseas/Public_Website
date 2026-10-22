@@ -115,9 +115,9 @@ export default {
     done: 'Afgerond',
     next: 'Volgende',
     milestones: [
-      { when: 'Dec 2025', title: 'TSE-subsidie', text: 'Topsector Energie-subsidie van de Nederlandse overheid', article: 'tse-grant' },
-      { when: 'Jul 2026', title: 'Exolum stapt in', text: 'Minderheidsaandeelhouder in SeaSeaS Amsterdam', article: 'exolum-minority-stake' },
       { when: 'Okt 2026', title: 'STUDI-subsidie', text: 'Subsidie toegekend door de Rijksdienst voor Ondernemend Nederland (RVO)', article: '' },
+      { when: 'Jul 2026', title: 'Exolum stapt in', text: 'Minderheidsaandeelhouder in SeaSeaS Amsterdam', article: 'exolum-minority-stake' },
+      { when: 'Dec 2025', title: 'TSE-subsidie', text: 'Topsector Energie-subsidie van de Nederlandse overheid', article: 'tse-grant' },
     ],
     items: [
       { when: '2026', what: 'Pre-FEED', status: 'done' },
