@@ -27,6 +27,10 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
 
 <!-- 1. Title -->
 <section class="hero" aria-labelledby="hero-title">
+  <img class="hero-bg" src={withBase('/images/terminal-3d.jpg')}
+    srcset={`${withBase('/images/terminal-3d-1100.jpg')} 1100w, ${withBase('/images/terminal-3d.jpg')} 2200w`}
+    sizes="100vw" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+  <div class="hero-fade" aria-hidden="true"></div>
   <div class="wrap">
     <h1 id="hero-title" set:html={co2(d.hero.title)} />
     <div class="hero-row">
