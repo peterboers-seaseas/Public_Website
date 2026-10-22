@@ -21,9 +21,9 @@ const items = (await getCollection('news', (e) => !e.data.draft))
           <article class="archive-row">
             <div class="archive-date">{newsDate(lang, i.data.date)}<br /><span class="type-tag">{i.data.type}</span></div>
             <div class="archive-text">
-              <h2><a href={articleUrl(lang, i.id)} set:html={co2(i.data.title)} /></h2>
+              <h2 set:html={co2(i.data.title)} />
               <p set:html={co2((lang === 'nl' && i.data.excerpt_nl) || i.data.excerpt)} />
-              <a class="read" href={articleUrl(lang, i.id)}>{d.news.readArticle}<span class="sr-only">: {i.data.title}</span></a>
+              <a class="read card-link" href={articleUrl(lang, i.id)}>{d.news.readArticle}<span class="sr-only">: {i.data.title}</span><span class="arrow" aria-hidden="true">→</span></a>
             </div>
             <NewsMedia media={i.data.media} class="archive-media" />
           </article>

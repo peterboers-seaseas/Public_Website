@@ -64,7 +64,7 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
         <div class="body">
           <div class="news-meta">{newsDate(lang, item.data.date)}, {item.data.type}</div>
           <h3 set:html={co2(item.data.title)} />
-          <a href={articleUrl(lang, item.id)}>{d.news.readArticle}<span class="sr-only">: {item.data.title}</span></a>
+          <a class="card-link" href={articleUrl(lang, item.id)}>{d.news.readArticle}<span class="sr-only">: {item.data.title}</span><span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
     ))}
