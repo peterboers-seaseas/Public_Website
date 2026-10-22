@@ -464,3 +464,6 @@ button { font: inherit; cursor: pointer; }
   .person.linked:hover, .person.linked:focus-within { transform: none; }
   .person.linked:hover .media { transform: none; }
 }
+
+.footer-logo { display: inline-flex; }
+.footer-logo:hover { opacity: 0.85; }
