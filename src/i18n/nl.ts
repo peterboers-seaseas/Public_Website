@@ -80,7 +80,7 @@ export default {
     lead: 'Waarom emittenten voor SeaSeaS kiezen',
     intro: 'Flexibiliteit in transport, opslagbestemming en timing, zodat u een haalbare route voor uw CO₂ kunt opzetten, ook voordat andere infrastructuur gereed is.',
     cards: [
-      { icon: 'rail', title: 'Multimodale toegang', text: 'Lever uw CO₂ aan per vrachtwagen, trein, binnenvaartschip of pijpleiding. Geen directe aansluiting op een pijpleiding? Dan is CCS toch binnen bereik, ook voor locaties in Duitsland en het Nederlandse achterland.' },
+      { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten, onder gelijke voorwaarden. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
       { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Verscheep naar verschillende opslaglocaties onder de Noordzee zodra die beschikbaar komen, in plaats van uw project te binden aan één transport- en opslagketen.' },
       { icon: 'terminal', title: 'Schaalbare capaciteit', text: 'Begin met de volumes die u nu heeft en groei mee in de tijd. De terminal start rond 1 Mtpa in 2030 en is ontworpen om te groeien naar 3,5 Mtpa.' },
       { icon: 'bullet', title: 'Minder afhankelijk van andere projecten', text: 'Loopt andere CO₂-infrastructuur vertraging op? Dan biedt SeaSeaS uw afvanginstallatie een alternatieve route naar opslag. Start eerder en wees minder afhankelijk van één pijpleiding of opslagproject.' },
