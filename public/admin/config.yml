@@ -16,30 +16,34 @@ locale: en
 media_folder: public/images/news
 public_folder: /images/news
 
-i18n:
-  structure: multiple_folders
-  locales: [en, nl]
-  default_locale: en
-
 collections:
   - name: news
     label: News and publications
-    label_singular: News item
+    label_singular: News article
     folder: src/content/news
     create: true
-    i18n: true
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: "{{slug}}"
     summary: "{{date | date('YYYY-MM-DD')}} · {{title}}"
     sortable_fields: [date, title]
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Date (used for ordering), name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD, i18n: duplicate }
-      - { label: "Date text (optional, e.g. 'Spring 2026')", name: dateLabel, widget: string, required: false, i18n: true }
-      - { label: "Type (e.g. Press release, Publication)", name: type, widget: string, i18n: true }
-      - { label: Image (16:9), name: image, widget: image, required: false, i18n: duplicate }
-      - { label: "Link (article, PDF or LinkedIn post)", name: link, widget: string, required: false, i18n: true }
-      - { label: "Link text (optional)", name: linkLabel, widget: string, required: false, i18n: true }
-      - { label: "Hide from site (draft)", name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Title, name: title, widget: string }
+      - { label: Date (used for ordering), name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+      - { label: "Published (text, e.g. '30 July 2026 at 18:26')", name: published, widget: string, required: false }
+      - { label: "Type (e.g. Press release, Publication)", name: type, widget: string, default: Press release }
+      - { label: Summary (English, 1-2 sentences), name: excerpt, widget: text }
+      - { label: Summary (Dutch, optional), name: excerpt_nl, widget: text, required: false }
+      - label: Image
+        name: media
+        widget: object
+        fields:
+          - { label: Background photo (16:9), name: photo, widget: image, required: false }
+          - { label: "Photo focus (e.g. '20% 40%')", name: position, widget: string, default: "50% 50%" }
+          - { label: Partner logo (transparent PNG), name: logo, widget: image, required: false }
+          - { label: Logo description, name: logoAlt, widget: string, required: false }
+          - { label: Logo width (% of the image), name: logoWidth, widget: number, value_type: int, default: 44 }
+      - { label: Key points (optional), name: bullets, widget: list, required: false }
+      - { label: "Hide from site (draft)", name: draft, widget: boolean, default: false }
+      - { label: Article text, name: body, widget: markdown }
 
   - name: team
     label: Team

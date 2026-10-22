@@ -1,17 +1,26 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// News items live in src/content/news/en and src/content/news/nl (one Markdown file per item, per language).
+// News articles live in src/content/news (one Markdown file per article; the file name is the web address).
+// The article text is written in English; the Dutch site shows the same text with a short note.
 const news = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  loader: glob({ pattern: '*.md', base: './src/content/news' }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(), // used for sorting (newest first)
-    dateLabel: z.string().optional(), // optional text shown instead of the formatted date
-    type: z.string(),
-    image: z.string().optional(),
-    link: z.string().optional(),
-    linkLabel: z.string().optional(),
+    published: z.string().optional(), // e.g. "30 July 2026 at 18:26"
+    type: z.string().default('Press release'),
+    excerpt: z.string(),
+    excerpt_nl: z.string().optional(),
+    // Card and header image: a photo with a soft fade, and the partner logo on the right.
+    media: z.object({
+      photo: z.string().optional(),
+      position: z.string().default('50% 50%'),
+      logo: z.string().optional(),
+      logoAlt: z.string().default(''),
+      logoWidth: z.number().default(44),
+    }),
+    bullets: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),
 });

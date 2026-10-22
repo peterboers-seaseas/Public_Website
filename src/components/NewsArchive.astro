@@ -1,36 +1,38 @@
 ---
-// Full list of news and publications, newest first.
+// All news and publications, newest first.
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { t, url, type Lang } from '../i18n';
+import NewsMedia from './NewsMedia.astro';
+import { t, url, articleUrl, co2, newsDate, type Lang } from '../i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const d = t(lang);
-const items = (await getCollection('news', (e) => e.id.startsWith(`${lang}/`) && !e.data.draft))
+const items = (await getCollection('news', (e) => !e.data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const fmt = new Intl.DateTimeFormat(lang === 'nl' ? 'nl-NL' : 'en-GB', { month: 'long', year: 'numeric' });
 ---
 <Base lang={lang} title={d.labels.news} page="news">
-  <section class="simple">
-    <div class="wrap">
-      <h1>{d.labels.news}</h1>
-      <ol class="archive">
+  <section class="wrap page-grid">
+    <p class="crumb"><a href={url(lang)}>{d.news.home}</a> / {d.news.crumb}</p>
+    <div class="page-main">
+      <h1 class="page-title">{d.labels.news}</h1>
+      <p class="page-intro" set:html={co2(d.news.archiveIntro)} />
+      <div class="archive">
         {items.map((i) => (
-          <li>
-            <span class="news-meta">{i.data.dateLabel ?? fmt.format(i.data.date)}, {i.data.type}</span>
-            <h2>{i.data.link ? <a href={i.data.link}>{i.data.title}</a> : i.data.title}</h2>
-          </li>
+          <article class="archive-row">
+            <div class="archive-date">{newsDate(lang, i.data.date)}<br /><span class="type-tag">{i.data.type}</span></div>
+            <div class="archive-text">
+              <h2><a href={articleUrl(lang, i.id)} set:html={co2(i.data.title)} /></h2>
+              <p set:html={co2((lang === 'nl' && i.data.excerpt_nl) || i.data.excerpt)} />
+              <a class="read" href={articleUrl(lang, i.id)}>{d.news.readArticle}<span class="sr-only">: {i.data.title}</span></a>
+            </div>
+            <NewsMedia media={i.data.media} class="archive-media" />
+          </article>
         ))}
-      </ol>
-      <p><a href={url(lang)}>{d.legal.back}</a></p>
+      </div>
+      <div class="follow">
+        <p>{d.news.follow}</p>
+        <a class="btn btn-primary" href={d.contact.linkedin_url}>{d.news.followCta}</a>
+      </div>
     </div>
   </section>
 </Base>
-<style>
-  .archive { margin-top: 40px; max-width: 900px; }
-  .archive li { padding: 24px 0; border-top: 1px solid var(--lavender); }
-  .archive li:last-child { border-bottom: 1px solid var(--lavender); }
-  .archive h2 { margin-top: 4px; font-size: 22px; line-height: 1.3; font-weight: 600; color: var(--ultramarine); }
-  .archive h2 a { color: inherit; text-decoration: none; }
-  .archive h2 a:hover { text-decoration: underline; }
-</style>

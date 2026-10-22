@@ -17,4 +17,14 @@ export const url = (lang: Lang, page = ''): string => {
   return withBase(page ? `${base}${page}/` : base);
 };
 
+/** Path of a news article, e.g. articleUrl('en', 'tse-grant') -> '/news/tse-grant/'. */
+export const articleUrl = (lang: Lang, slug: string): string => url(lang, `news/${slug}`);
+
 export const otherLang = (lang: Lang): Lang => (lang === 'en' ? 'nl' : 'en');
+
+/** House style: show "CO₂" with a properly sized subscript. Use with set:html. */
+export const co2 = (s: string): string => s.replace(/CO₂/g, 'CO<span class="sub2">2</span>');
+
+/** Format a news date as "30 July 2026" / "30 juli 2026". */
+export const newsDate = (lang: Lang, d: Date): string =>
+  new Intl.DateTimeFormat(lang === 'nl' ? 'nl-NL' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);

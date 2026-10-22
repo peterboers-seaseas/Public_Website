@@ -1,18 +1,29 @@
 ---
-// Placeholder legal page. Replace the paragraph with the real text when it is available.
+// Privacy & cookies, and disclaimer. The texts live in src/i18n/en.ts and nl.ts under "legal".
 import Base from '../layouts/Base.astro';
 import { t, url, type Lang } from '../i18n';
-interface Props { lang: Lang; page: 'privacy' | 'cookies' | 'disclaimer' }
+interface Props { lang: Lang; page: 'privacy' | 'disclaimer' }
 const { lang, page } = Astro.props;
 const d = t(lang);
-const title = d.footer[page];
+const L = d.legal[page];
+type Sec = { h: string; p?: string[]; list?: string[]; after?: string[] };
+const sections = L.sections as Sec[];
 ---
-<Base lang={lang} title={title} page={page}>
-  <section class="simple">
-    <div class="wrap">
-      <h1>{title}</h1>
-      <p>{d.legal.placeholder.replace('[TITLE]', title.toLowerCase())}</p>
-      <p><a href={url(lang)}>{d.legal.back}</a></p>
+<Base lang={lang} title={L.title} page={page}>
+  <section class="wrap page-grid">
+    <p class="crumb"><a href={url(lang)}>{d.legal.home}</a> / <span set:html={L.crumb} /></p>
+    <div class="page-main legal">
+      <h1 class="page-title">{L.title}</h1>
+      <p class="page-intro">{L.intro}</p>
+      <p class="updated">{d.legal.updated}</p>
+      {sections.map((s) => (
+        <>
+          <h2>{s.h}</h2>
+          {(s.p ?? []).map((x) => <p set:html={x} />)}
+          {s.list && <ul>{s.list.map((x) => <li set:html={x} />)}</ul>}
+          {(s.after ?? []).map((x) => <p set:html={x} />)}
+        </>
+      ))}
     </div>
   </section>
 </Base>

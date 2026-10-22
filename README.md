@@ -18,21 +18,21 @@ npm run build    # production build into dist/
 | What | Where |
 | --- | --- |
 | All page texts (EN / NL) | `src/i18n/en.ts` and `src/i18n/nl.ts` (same structure; NL is a draft translation, please proofread) |
-| News items | `src/content/news/en/*.md` and `src/content/news/nl/*.md`, one file per item per language |
+| News articles | `src/content/news/*.md`, one file per article; the file name becomes the web address (`/news/<file-name>/`) |
 | Team members | `src/content/team/*.md` (name, roles in EN and NL, photo, LinkedIn, order) |
-| Videos | `public/videos/` with the file names listed in `public/videos/README.txt` |
-| Team photo, portraits | `public/images/team/` (`team.jpg` + names used in the team files) |
-| News images (16:9) | `public/images/news/` |
+| Videos | `public/videos/` (see `public/videos/README.txt`); the 3D terminal video starts muted when visitors scroll |
+| Team photo, portraits | `public/images/team/` (`team.jpg` + names used in the team files); add LinkedIn URLs in `src/content/team/*.md` to show the LinkedIn icons |
+| News images and partner logos | `public/images/news/` |
 | Colours, spacing, fonts | `src/styles/global.css` (brand tokens at the top) |
 | Video paths, contact-form endpoint | `src/config.ts` |
-| Legal pages (privacy, cookies, disclaimer) | `src/components/LegalPage.astro` (placeholder text for now) |
+| Privacy & cookies, disclaimer | texts in `src/i18n/en.ts` and `nl.ts` under `legal` (draft: fill in the [placeholders] and have them checked) |
 
 Missing images and videos show a labelled placeholder, so the site always builds.
-The two `[placeholder]` news items in each language should be replaced or deleted before launch.
 
-### Adding a news item
-Copy an existing file in `src/content/news/en/`, change the fields, and do the same in `src/content/news/nl/`.
-Newest `date` appears first. Optional: `dateLabel` (text instead of the date), `image`, `link`, `linkLabel`, `draft: true` (hidden).
+### Adding a news article
+Copy an existing file in `src/content/news/`, give it a new file name (this becomes the web address) and change the fields and text.
+Newest `date` appears first. The article text is written in English; the Dutch site shows the same text with a short note and uses `excerpt_nl` as summary.
+Set `draft: true` to hide an article.
 
 ## Hosting: two options
 

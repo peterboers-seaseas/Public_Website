@@ -1,0 +1,16 @@
+---
+// News image: photo (or drawing) with a pale-mint fade from the right and the partner logo on top.
+import { withBase } from '../i18n';
+interface Props {
+  media: { photo?: string; position: string; logo?: string; logoAlt: string; logoWidth: number };
+  class?: string;
+  wide?: boolean; // article header: wider fade and smaller logo
+}
+const { media, class: cls = '', wide = false } = Astro.props;
+const logoWidth = wide ? Math.round(media.logoWidth * 0.7) : media.logoWidth;
+---
+<div class={`nmedia ${wide ? 'wide' : ''} ${cls}`}>
+  {media.photo && <img class="nm-photo" src={withBase(media.photo)} alt="" loading="lazy" decoding="async" style={`object-position: ${media.position}`} />}
+  <div class="nm-fade" aria-hidden="true"></div>
+  {media.logo && <img class="nm-logo" src={withBase(media.logo)} alt={media.logoAlt} loading="lazy" decoding="async" style={`width: ${logoWidth}%`} />}
+</div>

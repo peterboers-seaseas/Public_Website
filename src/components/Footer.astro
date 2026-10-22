@@ -13,8 +13,7 @@ const home = url(lang);
       <a href={`${home}#about`}>{d.nav.about}</a>
       <a href={`${home}#emitters`}>{d.nav.emitters}</a>
       <a href={`${home}#contact`}>{d.labels.contact}</a>
-      <a class="legal" href={url(lang, 'privacy')}>{d.footer.privacy}</a>
-      <a class="legal" href={url(lang, 'cookies')}>{d.footer.cookies}</a>
+      <a class="legal" href={url(lang, 'privacy')} set:html={d.footer.privacy} />
       <a class="legal" href={url(lang, 'disclaimer')}>{d.footer.disclaimer}</a>
       <a href={url(otherLang(lang))} hreflang={otherLang(lang)} aria-label={d.nav.switchLabel}><strong>EN | NL</strong></a>
     </nav>

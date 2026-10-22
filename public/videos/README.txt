@@ -1,8 +1,4 @@
-Put the videos here, with exactly these file names:
-
-- terminal-loop.mp4    (homepage top video; short loop, muted autoplay; MP4/H.264, ideally under 10 MB)
-- terminal-poster.jpg  (still frame shown before it loads and for visitors with reduced motion)
-- location-zoom.mp4    (zoom-out from the site to Western Europe)
-- location-poster.jpg
-
-Until the files are here, the site shows a placeholder.
+Videos used on the site:
+- terminal.mp4 + terminal-poster.jpg : 3D terminal video (homepage, starts muted when the visitor scrolls)
+- location-zoom.mp4 + location-poster.jpg : location video (not yet available; a placeholder is shown until the file exists)
+Keep videos web-sized (720p, H.264, about 10 MB per 2 minutes).
