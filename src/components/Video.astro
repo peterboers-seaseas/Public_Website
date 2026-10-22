@@ -123,8 +123,19 @@ const soundIcon = '<path d="M11 5L6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 
       const r = seek.getBoundingClientRect();
       video.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * video.duration;
     });
-    video.addEventListener('play', showState);
-    video.addEventListener('pause', showState);
+    // Controls fade out ~3 s after the video starts and come back on mouse movement, tap or keyboard focus.
+    let hideTimer: number | undefined;
+    const wake = () => {
+      root.classList.remove('idle');
+      window.clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => {
+        if (!video.paused && !root.contains(document.activeElement)) root.classList.add('idle');
+      }, 3000);
+    };
+    ['mousemove', 'touchstart', 'focusin'].forEach((e) => root.addEventListener(e, wake, { passive: true }));
+    root.addEventListener('mouseleave', () => { if (!video.paused) { window.clearTimeout(hideTimer); hideTimer = window.setTimeout(() => root.classList.add('idle'), 800); } });
+    video.addEventListener('play', () => { showState(); wake(); });
+    video.addEventListener('pause', () => { showState(); window.clearTimeout(hideTimer); root.classList.remove('idle'); });
     video.addEventListener('volumechange', showSound);
     video.addEventListener('timeupdate', showTime);
     video.addEventListener('loadedmetadata', showTime);
