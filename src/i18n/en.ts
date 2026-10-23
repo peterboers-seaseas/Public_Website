@@ -116,7 +116,7 @@ export default {
     done: 'Completed',
     next: 'Next',
     milestones: [
-      { when: 'Oct 2026', title: 'STUDI grant', text: 'Subsidy granted by the Netherlands Enterprise Agency (RVO)', article: '' },
+      { when: 'Oct 2026', title: 'STUDI grant', text: 'Subsidy granted by the Netherlands Enterprise Agency (RVO)', article: 'studi-grant' },
       { when: 'Jul 2026', title: 'Exolum joins', text: 'Minority shareholder in SeaSeaS Amsterdam', article: 'exolum-minority-stake' },
       { when: 'Dec 2025', title: 'TSE grant', text: 'Topsector Energy grant from the Dutch Government', article: 'tse-grant' },
     ],
