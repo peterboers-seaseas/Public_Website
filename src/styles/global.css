@@ -485,7 +485,7 @@ button { font: inherit; cursor: pointer; }
 
 /* Partner logo band (About SeaSeaS) */
 .partners { margin-top: 72px; }
-.partners-title { font-size: 15px; font-weight: 600; color: var(--ultramarine); }
+.partners-title { font-size: 17px; font-weight: 700; color: var(--ultramarine); }
 .marquee { margin-top: 20px; display: flex; overflow: hidden; border-top: 1px solid var(--lavender); border-bottom: 1px solid var(--lavender);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); }
 .marquee-track { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; flex: none; min-height: 112px; animation: marquee 48s linear infinite; }
