@@ -72,8 +72,8 @@ export default {
     headline: 'Pioneering CO₂ logistics',
     body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the safe and specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act.',
     cols: [
-      { title: 'Export Terminal', text: 'An open-access, multimodal terminal in the Port of Amsterdam, receiving CO₂ by barge, truck, rail or pipeline and shipping it to North Sea storage, with utilisation (CCU) as an option. Designed for up to 3.5 Mtpa, with operations expected from 2030.' },
-      { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain. By developing safe and critical supply chains for emitters to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
+      { title: 'Export Terminal', text: 'An open-access, multimodal terminal in the Port of Amsterdam, receiving CO₂ by barge, truck, rail or pipeline and shipping it to North Sea storage (Circular Carbon Utilisation as an option). Designed for up to 3.5 Mtpa, with operations expected from 2030.' },
+      { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain: developing safe and critical routes to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
       { title: 'Exolum', text: 'Exolum joined SeaSeaS as minority shareholder in 2026. It brings experience in developing and operating large-scale logistics infrastructure, and expertise in storing and transporting liquid products, supporting a safe terminal that can expand as demand grows.', logo: '/images/news/exolum-logo.png', link: 'https://exolum.com/' },
     ],
   },
