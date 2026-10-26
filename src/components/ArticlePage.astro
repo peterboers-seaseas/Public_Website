@@ -16,7 +16,7 @@ const desc = (lang === 'nl' && entry.data.excerpt_nl) || entry.data.excerpt;
   <article class="wrap page-grid">
     <aside class="article-aside">
       <p class="crumb"><a href={url(lang)}>{d.news.home}</a> / <a href={url(lang, 'news')}>{d.news.crumb}</a></p>
-      <div class="article-meta">{d.news.published} {entry.data.published ?? newsDate(lang, entry.data.date)}<br /><span class="type-tag">{entry.data.type}</span></div>
+      <div class="article-meta">{d.news.published} {newsDate(lang, entry.data.date)}<br /><span class="type-tag">{entry.data.type}</span></div>
     </aside>
     <div class="page-main">
       <h1 class="article-title" set:html={co2(entry.data.title)} />
