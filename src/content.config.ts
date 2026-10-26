@@ -8,7 +8,7 @@ const news = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(), // used for sorting (newest first)
-    published: z.string().optional(), // e.g. "30 July 2026 at 18:26"
+    published: z.string().optional(), // no longer shown; the page shows the date only
     type: z.string().default('Press release'),
     excerpt: z.string(),
     excerpt_nl: z.string().optional(),

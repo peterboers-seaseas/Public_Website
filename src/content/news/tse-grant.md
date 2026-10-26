@@ -1,7 +1,6 @@
 ---
 title: "Dutch Government support for SeaSeaS Amsterdam"
 date: "2026-01-08"
-published: "8 January 2026 at 16:46"
 type: "Press release"
 excerpt: "SeaSeaS has been awarded a TSE (Topsector Energy) grant for its open-access CO₂ terminal in the Port of Amsterdam, helping move the project towards an investment decision."
 excerpt_nl: "SeaSeaS heeft een TSE-subsidie (Topsector Energie) ontvangen voor de open-access CO₂-terminal in de haven van Amsterdam. Dit brengt het project dichter bij een investeringsbesluit."

@@ -1,7 +1,6 @@
 ---
 title: "Exolum acquires a minority stake in SeaSeaS Amsterdam CO₂ terminal project"
 date: "2026-07-30"
-published: "30 July 2026 at 18:26"
 type: "Press release"
 excerpt: "Exolum has completed the acquisition of a minority stake in SeaSeaS Amsterdam. The investment helps accelerate infrastructure connecting industrial emitters in the Netherlands and Germany with permanent storage beneath the North Sea."
 excerpt_nl: "Exolum heeft een minderheidsbelang verworven in SeaSeaS Amsterdam. De investering versnelt de ontwikkeling van infrastructuur die industriële uitstoters in Nederland en Duitsland verbindt met permanente opslag onder de Noordzee."

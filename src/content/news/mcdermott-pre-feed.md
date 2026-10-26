@@ -1,7 +1,6 @@
 ---
 title: "SeaSeaS awards McDermott pre-FEED for liquid CO₂ terminal in the Port of Amsterdam"
 date: "2026-03-10"
-published: "10 March 2026 at 16:04"
 type: "Press release"
 excerpt: "SeaSeaS has awarded McDermott the pre-front-end engineering and design (pre-FEED) contract for its planned open-access liquid CO₂ terminal in the Port of Amsterdam."
 excerpt_nl: "SeaSeaS heeft McDermott het pre-FEED-contract gegund voor de geplande open-access terminal voor vloeibare CO₂ in de haven van Amsterdam."
