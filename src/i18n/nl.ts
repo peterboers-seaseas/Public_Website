@@ -68,6 +68,7 @@ export default {
     englishOnly: 'Dit persbericht is alleen in het Engels beschikbaar.',
   },
   about: {
+    partnersTitle: 'In samenwerking met',
     headline: 'Pioniers in CO₂-logistiek',
     body: 'SeaSeaS is opgericht door Kees van Seventer en Peter Boers, gedreven door een heldere visie en inzicht in een urgente wereldwijde behoefte. Nu de wereld de gevolgen van klimaatverandering onder ogen ziet, zoekt elke sector dringend naar haalbare routes naar verduurzaming. Wij zagen een belangrijke lacune in het complexe samenspel van ketenontwikkeling, havenlogistiek en infrastructuur, en de veilige en gespecialiseerde opslag en behandeling van gassen zoals CO₂. Deze unieke niche, in combinatie met onze achtergrond, was voor ons de aanleiding om in actie te komen.',
     cols: [

@@ -69,6 +69,7 @@ export default {
     englishOnly: '',
   },
   about: {
+    partnersTitle: 'Working together with',
     headline: 'Pioneering CO₂ logistics',
     body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the safe and specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act.',
     cols: [
