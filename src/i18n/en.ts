@@ -79,6 +79,17 @@ export default {
     ],
   },
   emitters: {
+    segmentsTitle: 'Emitters we work with',
+    segments: [
+      { icon: 'segment-waste-to-energy', title: 'Waste-to-energy', tag: 'Biogenic and fossil CO₂', text: 'Mixed biogenic and fossil CO₂, in large volumes.' },
+      { icon: 'segment-cement', title: 'Cement', tag: 'Process emissions', text: 'Process emissions from limestone that can’t be avoided.' },
+      { icon: 'segment-lime', title: 'Lime producers', tag: 'Process emissions', text: 'Process CO₂ released when limestone is burnt into lime.' },
+      { icon: 'segment-green-gas', title: 'Green gas producers', tag: 'Biogenic CO₂', text: 'Concentrated biogenic CO₂ released when biogas is upgraded to green gas.' },
+      { icon: 'segment-bricks', title: 'Bricks', tag: 'Process and fuel CO₂', text: 'CO₂ from firing clay bricks in kilns, from both the fuel and the clay itself.' },
+      { icon: 'segment-paper', title: 'Paper', tag: 'Biogenic and fossil CO₂', text: 'CO₂ from the steam and power that paper mills need, often partly biogenic.' },
+      { icon: 'segment-beccs', title: 'BECCS', tag: 'Negative emissions', text: 'Bio-energy with CCS: storing biogenic CO₂ from biomass plants removes it from the atmosphere.' },
+      { icon: 'segment-syngas', title: 'Syngas', tag: 'Concentrated CO₂', text: 'Concentrated CO₂ separated when syngas is made from waste or biomass.' },
+    ],
     lead: 'Why emitters choose SeaSeaS',
     intro: 'Flexibility in inbound transport modality, storage destination and timing, so you can build a feasible export route for your CO₂.',
     cards: [

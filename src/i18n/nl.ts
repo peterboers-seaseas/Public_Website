@@ -78,6 +78,17 @@ export default {
     ],
   },
   emitters: {
+    segmentsTitle: 'Emittenten waarmee we werken',
+    segments: [
+      { icon: 'segment-waste-to-energy', title: 'Afvalenergiecentrales', tag: 'Biogene en fossiele CO₂', text: 'Gemengde biogene en fossiele CO₂, in grote volumes.' },
+      { icon: 'segment-cement', title: 'Cement', tag: 'Procesemissies', text: 'Procesemissies uit kalksteen die niet te vermijden zijn.' },
+      { icon: 'segment-lime', title: 'Kalkproducenten', tag: 'Procesemissies', text: 'Proces-CO₂ die vrijkomt bij het branden van kalksteen tot kalk.' },
+      { icon: 'segment-green-gas', title: 'Groengasproducenten', tag: 'Biogene CO₂', text: 'Geconcentreerde biogene CO₂ die vrijkomt bij het opwaarderen van biogas tot groen gas.' },
+      { icon: 'segment-bricks', title: 'Bakstenen', tag: 'Proces- en brandstof-CO₂', text: 'CO₂ uit het bakken van klei in ovens, uit zowel de brandstof als de klei zelf.' },
+      { icon: 'segment-paper', title: 'Papier', tag: 'Biogene en fossiele CO₂', text: 'CO₂ uit de stoom en energie die papierfabrieken nodig hebben, vaak deels biogeen.' },
+      { icon: 'segment-beccs', title: 'BECCS', tag: 'Negatieve emissies', text: 'Bio-energie met CCS: opslag van biogene CO₂ uit biomassacentrales haalt CO₂ uit de atmosfeer.' },
+      { icon: 'segment-syngas', title: 'Syngas', tag: 'Geconcentreerde CO₂', text: 'Geconcentreerde CO₂ die wordt afgescheiden bij de productie van syngas uit afval of biomassa.' },
+    ],
     lead: 'Waarom emittenten voor SeaSeaS kiezen',
     intro: 'Flexibiliteit in aanvoermodaliteit, opslagbestemming en timing, zodat u een haalbare exportroute voor uw CO₂ kunt opzetten.',
     cards: [
