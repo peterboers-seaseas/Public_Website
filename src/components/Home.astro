@@ -6,7 +6,7 @@ import Video from './Video.astro';
 import Media from './Media.astro';
 import NewsMedia from './NewsMedia.astro';
 import { t, url, articleUrl, co2, newsDate, withBase, type Lang } from '../i18n';
-import { VIDEOS, TEAM_PHOTO, FORM_ACTION } from '../config';
+import { VIDEOS, FORM_ACTION } from '../config';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -190,11 +190,9 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
 
 <!-- 9. Leadership -->
 <Section id="team" label={d.labels.team}>
+  <p class="lead">{d.team.photoTitle}</p>
+  <p class="team-intro" set:html={co2(d.team.photoText)} />
   <Slider lang={lang} label={d.labels.team}>
-    <figure class="person team-photo">
-      <Media src={TEAM_PHOTO} alt={d.team.photoAlt} label={d.team.photoAlt} />
-      <figcaption class="person-body"><h3>{d.team.photoTitle}</h3><p set:html={co2(d.team.photoText)} /></figcaption>
-    </figure>
     {team.map((p) => (
       <div class:list={['person', { linked: !!p.data.linkedin }]}>
         <Media src={p.data.photo} alt={p.data.name} label={nl ? 'Portret' : 'Portrait'} />

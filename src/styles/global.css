@@ -479,3 +479,6 @@ button { font: inherit; cursor: pointer; }
 .about-logo img { width: 140px; height: auto; }
 .about-logo:hover { opacity: 0.8; }
 @media (max-width: 900px) { .about-logo img { width: 120px; } }
+
+.team-intro { margin: 16px 0 40px; max-width: 760px; }
+@media (max-width: 900px) { .team-intro { margin: 12px 0 24px; } }

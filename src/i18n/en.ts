@@ -23,7 +23,7 @@ export default {
   hero: {
     title: 'Ready to connect emitters to North Sea CO₂ storage in 2030',
     sub1: 'SeaSeaS is developing a strategic CO₂ export terminal in the Port of Amsterdam, with access to multiple North Sea sinks.',
-    sub2: 'Deep-water access and pipeline, rail, road and barge connections give emitters a route to storage for their captured CO₂.',
+    sub2: 'Deep-water access and pipeline, rail, road and barge connections give emitters a route to storage for their captured fossil and biogenic CO₂.',
     ctaPrimary: 'Get in touch',
     ctaSecondary: 'Watch the terminal',
   },
@@ -70,11 +70,11 @@ export default {
   },
   about: {
     headline: 'Pioneering CO₂ logistics',
-    body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act.',
+    body: 'SeaSeaS was founded by Kees van Seventer and Peter Boers, driven by a clear vision and understanding of a critical global need. As the world confronts climate change, every industry is urgently seeking viable pathways for decarbonisation. We identified a significant gap in the complex interplay of supply chain development, port logistics and infrastructure, and the safe and specialised storage and handling of gases like CO₂. This unique niche, combined with our background, compelled us to act.',
     cols: [
-      { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain. By developing critical supply chains for emitters to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
+      { title: 'Export Terminal', text: 'An open-access, multimodal terminal in the Port of Amsterdam, receiving CO₂ by barge, truck, rail or pipeline and shipping it to North Sea storage, with utilisation (CCU) as an option. Designed for up to 3.5 Mtpa, with operations expected from 2030.' },
+      { title: 'Mission', text: 'Reduce global warming by helping inland emitters build their CO₂ supply chain. By developing safe and critical supply chains for emitters to transport, store (in subsea sinks) or repurpose captured CO₂ of both biogenic and non-biogenic origin.' },
       { title: 'Exolum', text: 'Exolum joined SeaSeaS as minority shareholder in 2026. It brings experience in developing and operating large-scale logistics infrastructure, and expertise in storing and transporting liquid products, supporting a safe terminal that can expand as demand grows.', logo: '/images/news/exolum-logo.png', link: 'https://exolum.com/' },
-      { title: 'Export Terminal', text: 'An open-access, multimodal terminal in the Port of Amsterdam, receiving CO₂ by barge, truck, rail or pipeline and shipping it to North Sea storage. Designed for up to 3.5 Mtpa, with operations expected from 2030.' },
     ],
   },
   emitters: {
@@ -83,7 +83,7 @@ export default {
     cards: [
       { icon: 'rail', title: 'Multimodal access', text: 'Open to all emitters on equal terms. Deliver your liquid CO₂ by barge, rail, truck or cryogenic pipeline, whether or not your site is connected to a CO₂ pipeline network.' },
       { icon: 'sink', title: 'Keep your storage options open', text: 'Ship to a range of North Sea storage sites as they come online, instead of tying your project to a single transport and storage chain.' },
-      { icon: 'terminal', title: 'Scalable capacity', text: 'Starting at around 1 Mtpa in 2030 keeps the investment decision within reach of a few early customers. The terminal is designed to expand to 3.5 Mtpa as demand grows.' },
+      { icon: 'terminal', title: 'Scalable buffer capacity', text: 'Starting at around 1 Mtpa in 2030 keeps the investment decision within reach of a few early customers. The terminal is designed to expand to 3.5 Mtpa as demand grows.' },
       { icon: 'bullet', title: 'Reduce project-on-project risk', text: 'If other CO₂ infrastructure is delayed, SeaSeaS gives your capture plant another route to storage. Start sooner, and depend less on any single pipeline or storage project.' },
     ],
   },
@@ -131,7 +131,7 @@ export default {
   },
   team: {
     photoTitle: 'The SeaSeaS team',
-    photoText: 'A track record in developing, building and operating cryogenic tank terminals, including GATE, CO₂next, Vopak Vlissingen and Advario Antwerp.',
+    photoText: 'An experienced team with a track record in developing, building and operating cryogenic tank terminals, including GATE, CO₂next, Vopak Vlissingen and Advario.',
     photoAlt: 'The SeaSeaS team',
     onLinkedin: 'on LinkedIn',
   },

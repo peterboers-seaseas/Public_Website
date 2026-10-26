@@ -22,7 +22,7 @@ export default {
   hero: {
     title: 'Klaar om emittenten in 2030 te verbinden met CO₂-opslag onder de Noordzee',
     sub1: 'SeaSeaS ontwikkelt een strategische CO₂-exportterminal in de haven van Amsterdam, met toegang tot meerdere opslaglocaties onder de Noordzee.',
-    sub2: 'Diepwatertoegang en verbindingen via pijpleiding, spoor, weg en binnenvaart geven emittenten een route naar opslag voor hun afgevangen CO₂.',
+    sub2: 'Diepwatertoegang en verbindingen via pijpleiding, spoor, weg en binnenvaart geven emittenten een route naar opslag voor hun afgevangen fossiele en biogene CO₂.',
     ctaPrimary: 'Neem contact op',
     ctaSecondary: 'Bekijk de terminal',
   },
@@ -69,11 +69,11 @@ export default {
   },
   about: {
     headline: 'Pioniers in CO₂-logistiek',
-    body: 'SeaSeaS is opgericht door Kees van Seventer en Peter Boers, gedreven door een heldere visie en inzicht in een urgente wereldwijde behoefte. Nu de wereld de gevolgen van klimaatverandering onder ogen ziet, zoekt elke sector dringend naar haalbare routes naar verduurzaming. Wij zagen een belangrijke lacune in het complexe samenspel van ketenontwikkeling, havenlogistiek en infrastructuur, en de gespecialiseerde opslag en behandeling van gassen zoals CO₂. Deze unieke niche, in combinatie met onze achtergrond, was voor ons de aanleiding om in actie te komen.',
+    body: 'SeaSeaS is opgericht door Kees van Seventer en Peter Boers, gedreven door een heldere visie en inzicht in een urgente wereldwijde behoefte. Nu de wereld de gevolgen van klimaatverandering onder ogen ziet, zoekt elke sector dringend naar haalbare routes naar verduurzaming. Wij zagen een belangrijke lacune in het complexe samenspel van ketenontwikkeling, havenlogistiek en infrastructuur, en de veilige en gespecialiseerde opslag en behandeling van gassen zoals CO₂. Deze unieke niche, in combinatie met onze achtergrond, was voor ons de aanleiding om in actie te komen.',
     cols: [
-      { title: 'Missie', text: 'De opwarming van de aarde beperken door emittenten in het achterland te helpen hun CO₂-keten op te bouwen. Door kritieke ketens te ontwikkelen waarmee emittenten afgevangen CO₂ van zowel biogene als niet-biogene oorsprong kunnen transporteren, opslaan (onder de zeebodem) of hergebruiken.' },
+      { title: 'Exportterminal', text: 'Een open-access, multimodale terminal in de haven van Amsterdam, die CO₂ ontvangt per binnenvaartschip, vrachtwagen, trein of pijpleiding en per schip naar opslag onder de Noordzee brengt, met hergebruik (CCU) als optie. Ontworpen voor maximaal 3,5 Mtpa, met de start van de operatie verwacht in 2030.' },
+      { title: 'Missie', text: 'De opwarming van de aarde beperken door emittenten in het achterland te helpen hun CO₂-keten op te bouwen. Door veilige en kritieke ketens te ontwikkelen waarmee emittenten afgevangen CO₂ van zowel biogene als niet-biogene oorsprong kunnen transporteren, opslaan (onder de zeebodem) of hergebruiken.' },
       { title: 'Exolum', text: 'Exolum is in 2026 als minderheidsaandeelhouder ingestapt bij SeaSeaS. Exolum brengt ervaring mee in het ontwikkelen en exploiteren van grootschalige logistieke infrastructuur, en expertise in de opslag en het transport van vloeibare producten. Dat ondersteunt de ontwikkeling van een veilige terminal die kan meegroeien met de vraag.', logo: '/images/news/exolum-logo.png', link: 'https://exolum.com/' },
-      { title: 'Exportterminal', text: 'Een open-access, multimodale terminal in de haven van Amsterdam, die CO₂ ontvangt per binnenvaartschip, vrachtwagen, trein of pijpleiding en per schip naar opslag onder de Noordzee brengt. Ontworpen voor maximaal 3,5 Mtpa, met de start van de operatie verwacht in 2030.' },
     ],
   },
   emitters: {
@@ -82,7 +82,7 @@ export default {
     cards: [
       { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten, onder gelijke voorwaarden. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
       { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Verscheep naar verschillende opslaglocaties onder de Noordzee zodra die beschikbaar komen, in plaats van uw project te binden aan één transport- en opslagketen.' },
-      { icon: 'terminal', title: 'Schaalbare capaciteit', text: 'Met een start rond 1 Mtpa in 2030 ligt het investeringsbesluit binnen bereik van enkele eerste klanten. De terminal is ontworpen om mee te groeien naar 3,5 Mtpa naarmate de vraag toeneemt.' },
+      { icon: 'terminal', title: 'Schaalbare buffercapaciteit', text: 'Met een start rond 1 Mtpa in 2030 ligt het investeringsbesluit binnen bereik van enkele eerste klanten. De terminal is ontworpen om mee te groeien naar 3,5 Mtpa naarmate de vraag toeneemt.' },
       { icon: 'bullet', title: 'Minder afhankelijk van andere projecten', text: 'Loopt andere CO₂-infrastructuur vertraging op? Dan biedt SeaSeaS uw afvanginstallatie een alternatieve route naar opslag. Start eerder en wees minder afhankelijk van één pijpleiding of opslagproject.' },
     ],
   },
@@ -130,7 +130,7 @@ export default {
   },
   team: {
     photoTitle: 'Het SeaSeaS-team',
-    photoText: 'Ervaring met het ontwikkelen, bouwen en exploiteren van cryogene tankterminals, waaronder GATE, CO₂next, Vopak Vlissingen en Advario Antwerpen.',
+    photoText: 'Een ervaren team met een trackrecord in het ontwikkelen, bouwen en exploiteren van cryogene tankterminals, waaronder GATE, CO₂next, Vopak Vlissingen en Advario.',
     photoAlt: 'Het SeaSeaS-team',
     onLinkedin: 'op LinkedIn',
   },
