@@ -13,7 +13,7 @@ export const TEAM_PHOTO = '/images/team/team.jpg';
 // - Hosted on Netlify: leave FORM_ACTION empty; Netlify Forms picks the form up automatically.
 // - Hosted on GitHub Pages: create a free form at formspree.io and paste its endpoint here,
 //   e.g. 'https://formspree.io/f/abcdwxyz'.
-export const FORM_ACTION = '';
+export const FORM_ACTION = 'https://form.taxi/s/rvge6w0d';
 
 // Partner and stakeholder logos in the moving band under "About SeaSeaS" (files in public/images/partners/).
 // h = logo height in pixels on desktop, so logos look equally large despite different shapes.
