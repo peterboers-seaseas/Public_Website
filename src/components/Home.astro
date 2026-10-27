@@ -333,7 +333,7 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
     const btn = form.querySelector<HTMLButtonElement>('[type="submit"]');
     if (btn) btn.disabled = true;
     try {
-      await fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form) as any) });
+      await fetch(form.action, { method: 'POST', mode: 'no-cors', referrerPolicy: 'no-referrer-when-downgrade', body: new URLSearchParams(new FormData(form) as any) });
       form.reset();
       thanks?.classList.remove('hidden');
       thanks?.scrollIntoView({ block: 'center', behavior: 'smooth' });
