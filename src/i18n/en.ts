@@ -150,7 +150,7 @@ export default {
   },
   contact: {
     title: 'Plan your CO₂ route with us',
-    text: 'Planning to capture CO₂, but transport and storage are not yet decided? Talk to our team early in your project. SeaSeaS offers flexibility in transport mode, storage destination and timing, and works with you to develop a feasible route for your CO₂.',
+    text: 'Planning to capture CO₂ and exploring your transport and storage options? Talk to our team about your project and discover how SeaSeaS’ open-access terminal in the Port of Amsterdam can offer a flexible route to permanent storage.',
     office: ['SeaSeaS Office', 'Aert van Nesstraat 45', '3012 EB Rotterdam, the Netherlands'],
     email_address: 'info@seaseas.nl',
     linkedin_url: 'https://www.linkedin.com/company/seaseas-ccs/',

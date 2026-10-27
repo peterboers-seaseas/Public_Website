@@ -149,7 +149,7 @@ export default {
   },
   contact: {
     title: 'Plan uw CO₂-route met ons',
-    text: 'Bent u van plan CO₂ af te vangen, maar liggen transport en opslag nog niet vast? Neem vroeg in uw project contact op met ons team. SeaSeaS biedt flexibiliteit in transportwijze, opslagbestemming en timing, en werkt met u samen aan een haalbare route voor uw CO₂.',
+    text: 'Bent u van plan CO₂ af te vangen en verkent u de mogelijkheden voor transport en opslag? Bespreek uw project met ons team en ontdek hoe de open-access terminal van SeaSeaS in de haven van Amsterdam een flexibele route naar permanente opslag kan bieden.',
     office: ['Kantoor SeaSeaS', 'Aert van Nesstraat 45', '3012 EB Rotterdam'],
     email_address: 'info@seaseas.nl',
     linkedin_url: 'https://www.linkedin.com/company/seaseas-ccs/',
