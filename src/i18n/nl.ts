@@ -137,8 +137,8 @@ export default {
       { when: 'Begin 2027', what: 'Start FEED', status: 'next' },
       { when: 'Q3 2028', what: 'Investeringsbesluit', status: '' },
       { when: '2028–2030', what: 'Bouw', status: '' },
-      { when: '2030', what: 'Start operatie <span class="normal">~1,0 Mtpa</span>', status: '' },
-      { when: '[Jaar nog te bepalen]', what: 'Uitbreiding naar <span class="normal">~3,5 Mtpa</span>', status: '' },
+      { when: '2030', what: 'Start operatie', status: '' },
+      { when: '2033–2035', what: 'Uitbreiding naar <span class="normal">~3,5 Mtpa</span>', status: '' },
     ],
   },
   team: {

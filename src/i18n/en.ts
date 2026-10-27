@@ -138,8 +138,8 @@ export default {
       { when: 'Early 2027', what: 'FEED starts', status: 'next' },
       { when: 'Q3 2028', what: 'Investment decision', status: '' },
       { when: '2028–2030', what: 'Construction', status: '' },
-      { when: '2030', what: 'Start operations <span class="normal">~1.0 Mtpa</span>', status: '' },
-      { when: '[Year TBC]', what: 'Build-out to <span class="normal">~3.5 Mtpa</span>', status: '' },
+      { when: '2030', what: 'Start operations', status: '' },
+      { when: '2033–2035', what: 'Build-out to <span class="normal">~3.5 Mtpa</span>', status: '' },
     ],
   },
   team: {
