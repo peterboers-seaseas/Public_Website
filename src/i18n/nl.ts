@@ -113,6 +113,7 @@ export default {
     lead: 'BioPark, Australiëhaven, haven van Amsterdam',
     text: 'Een terrein van circa 6 ha met diepwatertoegang via IJmuiden, spoor- en binnenvaartverbindingen met het Nederlandse en Duitse achterland, en pijpleidingbereik in het Amsterdamse havencluster. Bestaande en geplande CO₂-pijpleidingen in de haven kunnen op de terminal aansluiten, zodat een geïntegreerd CO₂-ecosysteem ontstaat.',
     videoLabel: 'Locatievideo: uitzoomen van het SeaSeaS-terrein naar Noordwest-Europa, met routes in het achterland en opslaglocaties onder de Noordzee',
+    mapAlt: 'Locatiekaart',
     stages: [
       { title: 'Terrein', text: 'BioPark-kavel en kade, Australiëhaven' },
       { title: 'Haven en regio', text: 'Noordzeekanaal, IJmuiden, spoor- en binnenvaartverbindingen' },
