@@ -181,7 +181,7 @@ export default {
           'SeaSeaS Amsterdam B.V.<br>Aert van Nesstraat 45<br>3012 EB Rotterdam, the Netherlands<br>Chamber of Commerce (KvK): 97194107<br>Email: <a href="mailto:info@seaseas.nl">info@seaseas.nl</a>',
         ] },
         { h: 'What data we collect', p: ['We only collect personal data that you provide to us or that is needed to run this website:'], list: [
-          '<strong>Contact form:</strong> your name, company, email address and message.',
+          '<strong>Contact form:</strong> your name, company, email address, message and the language version of the website you used. Messages are processed by our form service Form.taxi (see “Who we share it with”).',
           '<strong>Email and other correspondence:</strong> the details you share when you contact us directly.',
           '<strong>Technical data:</strong> our hosting provider may temporarily log technical information, such as your IP address and browser type, to keep the website secure and running.',
         ] },
@@ -190,8 +190,12 @@ export default {
           'maintain business contact with you, if you choose to stay in touch;',
           'keep the website secure and working properly.',
         ], after: ['We process this data on the basis of our legitimate interest in responding to enquiries and running our business, or to take steps at your request before entering into an agreement. We do not use your data for automated decision-making or profiling, and we never sell it.'] },
-        { h: 'How long we keep it', p: ['We keep contact details and correspondence for as long as needed to handle your enquiry, and no longer than [24 months] after our last contact, unless a business relationship requires longer retention or the law obliges us to keep it. Technical log data is deleted after [30 days].'] },
-        { h: 'Who we share it with', p: ['We do not share your data with third parties for their own purposes. We use a small number of service providers to run this website and our email, such as our hosting provider [name] and form service [name]. They process data only on our instructions, under a data processing agreement. If data is processed outside the European Economic Area, we make sure appropriate safeguards are in place, such as the European Commission’s Standard Contractual Clauses.'] },
+        { h: 'How long we keep it', p: ['We keep contact details and correspondence for as long as needed to handle your enquiry, and no longer than 24 months after our last contact, unless a business relationship requires longer retention or the law obliges us to keep it. Technical log data is kept by our hosting provider for a limited period only.'] },
+        { h: 'Who we share it with', p: ['We do not share your data with third parties for their own purposes. We use a small number of service providers who process data only on our instructions, under a data processing agreement:'], list: [
+          '<strong>Form.taxi</strong> (Austria), which receives messages sent through our contact form and forwards them to us by email. Form.taxi stores data on servers within the European Union.',
+          '<strong>Our hosting provider</strong>, which hosts this website on servers in Germany and may log technical data, such as IP addresses, to keep the website secure.',
+          '<strong>Google</strong> (Google Workspace), which provides our email services.',
+        ], after: ['Some of these providers, such as Google, may process data outside the European Economic Area. In that case, appropriate safeguards are in place, such as the EU-U.S. Data Privacy Framework or the European Commission’s Standard Contractual Clauses.'] },
         { h: 'Cookies', p: [
           'This website does not use tracking, analytics or advertising cookies. Fonts and videos are hosted on our own website, so no data is sent to third parties such as Google or YouTube when you visit. If we use any cookies at all, they are strictly necessary for the website to function, and they do not require your consent.',
           'Links to external websites, such as LinkedIn, are subject to the privacy and cookie policies of those websites.',

@@ -180,7 +180,7 @@ export default {
           'SeaSeaS Amsterdam B.V.<br>Aert van Nesstraat 45<br>3012 EB Rotterdam<br>KvK-nummer: 97194107<br>E-mail: <a href="mailto:info@seaseas.nl">info@seaseas.nl</a>',
         ] },
         { h: 'Welke gegevens we verzamelen', p: ['We verzamelen alleen persoonsgegevens die u zelf aan ons verstrekt of die nodig zijn om deze website te laten werken:'], list: [
-          '<strong>Contactformulier:</strong> uw naam, bedrijf, e-mailadres en bericht.',
+          '<strong>Contactformulier:</strong> uw naam, bedrijf, e-mailadres, bericht en de taalversie van de website die u gebruikte. Berichten worden verwerkt door onze formulierdienst Form.taxi (zie “Met wie we gegevens delen”).',
           '<strong>E-mail en andere correspondentie:</strong> de gegevens die u deelt wanneer u rechtstreeks contact met ons opneemt.',
           '<strong>Technische gegevens:</strong> onze hostingprovider kan tijdelijk technische informatie vastleggen, zoals uw IP-adres en browsertype, om de website veilig en werkend te houden.',
         ] },
@@ -189,8 +189,12 @@ export default {
           'zakelijk contact met u te onderhouden, als u daarvoor kiest;',
           'de website veilig te houden en goed te laten werken.',
         ], after: ['We verwerken deze gegevens op basis van ons gerechtvaardigd belang om vragen te beantwoorden en onze onderneming te voeren, of om op uw verzoek stappen te zetten voordat we een overeenkomst sluiten. We gebruiken uw gegevens niet voor geautomatiseerde besluitvorming of profilering, en we verkopen ze nooit.'] },
-        { h: 'Hoe lang we gegevens bewaren', p: ['We bewaren contactgegevens en correspondentie zolang dat nodig is om uw vraag af te handelen, en niet langer dan [24 maanden] na ons laatste contact, tenzij een zakelijke relatie een langere bewaartermijn vereist of de wet ons verplicht de gegevens te bewaren. Technische loggegevens worden na [30 dagen] verwijderd.'] },
-        { h: 'Met wie we gegevens delen', p: ['We delen uw gegevens niet met derden voor hun eigen doeleinden. We werken met een klein aantal dienstverleners voor deze website en onze e-mail, zoals onze hostingprovider [naam] en formulierdienst [naam]. Zij verwerken gegevens alleen in onze opdracht, op basis van een verwerkersovereenkomst. Als gegevens buiten de Europese Economische Ruimte worden verwerkt, zorgen we voor passende waarborgen, zoals de modelcontractbepalingen van de Europese Commissie.'] },
+        { h: 'Hoe lang we gegevens bewaren', p: ['We bewaren contactgegevens en correspondentie zolang dat nodig is om uw vraag af te handelen, en niet langer dan 24 maanden na ons laatste contact, tenzij een zakelijke relatie een langere bewaartermijn vereist of de wet ons verplicht de gegevens te bewaren. Technische loggegevens worden door onze hostingprovider slechts beperkte tijd bewaard.'] },
+        { h: 'Met wie we gegevens delen', p: ['We delen uw gegevens niet met derden voor hun eigen doeleinden. We werken met een klein aantal dienstverleners die gegevens uitsluitend in onze opdracht verwerken, op basis van een verwerkersovereenkomst:'], list: [
+          '<strong>Form.taxi</strong> (Oostenrijk), dat berichten via ons contactformulier ontvangt en per e-mail aan ons doorstuurt. Form.taxi slaat gegevens op servers binnen de Europese Unie op.',
+          '<strong>Onze hostingprovider</strong>, die deze website host op servers in Duitsland en technische gegevens zoals IP-adressen kan registreren om de website te beveiligen.',
+          '<strong>Google</strong> (Google Workspace), dat onze e-maildiensten levert.',
+        ], after: ['Sommige van deze dienstverleners, zoals Google, kunnen gegevens buiten de Europese Economische Ruimte verwerken. In dat geval zijn passende waarborgen getroffen, zoals het EU-VS Data Privacy Framework of de modelcontractbepalingen van de Europese Commissie.'] },
         { h: 'Cookies', p: [
           'Deze website gebruikt geen tracking-, analyse- of advertentiecookies. Lettertypen en video’s staan op onze eigen website, zodat er bij uw bezoek geen gegevens naar derden zoals Google of YouTube gaan. Als we al cookies gebruiken, zijn die strikt noodzakelijk voor het functioneren van de website en is uw toestemming niet nodig.',
           'Voor links naar externe websites, zoals LinkedIn, gelden het privacy- en cookiebeleid van die websites.',
