@@ -116,9 +116,9 @@ export default {
     videoLabel: 'Location video: zoom out from the SeaSeaS plot to Northwest Europe, with hinterland routes and North Sea sinks drawn in',
     mapAlt: 'Location map',
     stages: [
-      { title: 'Site', text: 'BioPark plot and quay, Australiëhaven' },
-      { title: 'Port and region', text: 'North Sea Canal, IJmuiden, rail and barge links' },
-      { title: 'Northwest Europe', text: 'German hinterland and North Sea storage sites' },
+      { title: 'Site', text: '~6 ha terminal: multimodal unloading and a 12.5 m draught jetty' },
+      { title: 'Port and region', text: 'Barge, rail and truck converge on the terminal; sea-going vessels sail out via IJmuiden' },
+      { title: 'Northwest Europe', text: 'Emitter clusters in the Netherlands and Germany connected to North Sea storage sites' },
     ],
   },
   timeline: {

@@ -115,9 +115,9 @@ export default {
     videoLabel: 'Locatievideo: uitzoomen van het SeaSeaS-terrein naar Noordwest-Europa, met routes in het achterland en opslaglocaties onder de Noordzee',
     mapAlt: 'Locatiekaart',
     stages: [
-      { title: 'Terrein', text: 'BioPark-kavel en kade, Australiëhaven' },
-      { title: 'Haven en regio', text: 'Noordzeekanaal, IJmuiden, spoor- en binnenvaartverbindingen' },
-      { title: 'Noordwest-Europa', text: 'Duits achterland en opslaglocaties onder de Noordzee' },
+      { title: 'Terrein', text: 'Terminal van circa 6 ha: multimodale overslag en een steiger voor 12,5 m diepgang' },
+      { title: 'Haven en regio', text: 'Binnenvaart, spoor en vrachtwagen komen samen bij de terminal; zeeschepen varen uit via IJmuiden' },
+      { title: 'Noordwest-Europa', text: 'Emittersclusters in Nederland en Duitsland verbonden met opslaglocaties onder de Noordzee' },
     ],
   },
   timeline: {
