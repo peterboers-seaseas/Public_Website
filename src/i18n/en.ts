@@ -112,7 +112,7 @@ export default {
   },
   location: {
     lead: 'Your CO₂ gateway at the BioPark site in the Port of Amsterdam',
-    text: 'A ~6 ha site with deep-water access via IJmuiden, rail and barge links to the Dutch and German hinterland, and pipeline reach into the Amsterdam port cluster. Existing and planned CO₂ pipelines in the port could connect to the terminal, creating an integrated CO₂ ecosystem.',
+    text: 'CO₂ arrives by barge, rail and truck from the Dutch and German hinterland, or by pipeline from emitters in the Amsterdam port cluster. On our ~6 ha site it is buffered and loaded onto vessels of up to 12.5 m draught for transport to North Sea storage.',
     videoLabel: 'Location video: zoom out from the SeaSeaS plot to Northwest Europe, with hinterland routes and North Sea sinks drawn in',
     mapAlt: 'Location map',
     stages: [
