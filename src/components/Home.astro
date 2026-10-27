@@ -174,7 +174,7 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
 <!-- 7. Location -->
 <Section id="location" label={d.labels.location}>
   <div class="loc-head">
-    <p class="lead">{d.location.lead}</p>
+    <p class="lead" set:html={co2(d.location.lead)} />
     <p set:html={co2(d.location.text)} />
   </div>
   <figure class="loc-maps" data-maps>

@@ -111,7 +111,7 @@ export default {
     ],
   },
   location: {
-    lead: 'BioPark, Australiëhaven, Port of Amsterdam',
+    lead: 'Your CO₂ gateway at the BioPark site in the Port of Amsterdam',
     text: 'A ~6 ha site with deep-water access via IJmuiden, rail and barge links to the Dutch and German hinterland, and pipeline reach into the Amsterdam port cluster. Existing and planned CO₂ pipelines in the port could connect to the terminal, creating an integrated CO₂ ecosystem.',
     videoLabel: 'Location video: zoom out from the SeaSeaS plot to Northwest Europe, with hinterland routes and North Sea sinks drawn in',
     mapAlt: 'Location map',
