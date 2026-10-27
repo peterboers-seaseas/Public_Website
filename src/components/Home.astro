@@ -272,10 +272,10 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
   </div>
   <form class="contact-form" name="contact" method="POST"
     action={FORM_ACTION || (nl ? withBase('/nl/?verzonden=1#contact') : withBase('/?sent=1#contact'))}
-    data-netlify={netlify ? 'true' : undefined} netlify-honeypot={netlify ? 'company-website' : undefined}>
+    data-netlify={netlify ? 'true' : undefined} netlify-honeypot={netlify ? '_gotcha' : undefined}>
     {netlify && <input type="hidden" name="form-name" value="contact" />}
     <input type="hidden" name="language" value={lang} />
-    <p class="hidden"><label>Leave empty <input name="company-website" tabindex="-1" autocomplete="off" /></label></p>
+    <p class="hidden"><label>Leave empty <input name="_gotcha" tabindex="-1" autocomplete="off" /></label></p>
     <label class="field">{d.contact.name}<input type="text" name="name" autocomplete="name" required /></label>
     <label class="field">{d.contact.company}<input type="text" name="company" autocomplete="organization" /></label>
     <label class="field">{d.contact.email}<input type="email" name="email" autocomplete="email" required /></label>
@@ -321,8 +321,24 @@ const liPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.85
     document.addEventListener('visibilitychange', () => (document.hidden ? stop() : play()));
   });
 
-  // Show the thank-you line after a successful form submission redirect.
+  // Contact form: light spam check, and remember the language for the thank-you redirect.
+  const KEY = 'seaseas-form-lang';
+  const form = document.querySelector<HTMLFormElement>('form.contact-form');
+  const loaded = Date.now();
+  form?.addEventListener('submit', (e) => {
+    const trap = form.querySelector<HTMLInputElement>('input[name="_gotcha"]');
+    if ((trap && trap.value) || Date.now() - loaded < 3000) { e.preventDefault(); return; }
+    try { localStorage.setItem(KEY, document.documentElement.lang); } catch {}
+  });
+
+  // After sending, Form.taxi returns visitors to the English page; send Dutch visitors to the Dutch page.
   if (/[?&](sent|verzonden)=1/.test(location.search)) {
-    document.querySelector('[data-thanks]')?.classList.remove('hidden');
+    let lang = '';
+    try { lang = localStorage.getItem(KEY) || ''; localStorage.removeItem(KEY); } catch {}
+    if (lang === 'nl' && document.documentElement.lang !== 'nl') {
+      location.replace(location.pathname.replace(/\/?$/, '/') + 'nl/?verzonden=1#contact');
+    } else {
+      document.querySelector('[data-thanks]')?.classList.remove('hidden');
+    }
   }
 </script>
