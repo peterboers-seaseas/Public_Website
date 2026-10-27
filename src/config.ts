@@ -2,7 +2,7 @@
 
 export const VIDEOS = {
   // Put the files in public/videos/ with exactly these names. Until they exist, a placeholder is shown.
-  terminal: { src: '/videos/terminal.mp4', poster: '/videos/terminal-poster.jpg' },
+  terminal: { src: '/videos/terminal-v8.mp4', poster: '/videos/terminal-v8-poster.jpg' },
   location: { src: '/videos/location-zoom.mp4', poster: '/videos/location-poster.jpg' },
 };
 
