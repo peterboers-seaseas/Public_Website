@@ -143,7 +143,7 @@ export default {
   },
   team: {
     photoTitle: 'Het SeaSeaS-team',
-    photoText: 'Een ervaren team met een trackrecord in het ontwikkelen, bouwen en exploiteren van cryogene tankterminals, waaronder GATE, CO₂next, Vopak Vlissingen en Advario.',
+    photoText: 'Een ervaren kernteam met een trackrecord in het ontwikkelen, bouwen en exploiteren van cryogene tankterminals, waaronder GATE, CO₂next, Vopak en Advario.',
     photoAlt: 'Het SeaSeaS-team',
     onLinkedin: 'op LinkedIn',
   },

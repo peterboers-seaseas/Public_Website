@@ -144,7 +144,7 @@ export default {
   },
   team: {
     photoTitle: 'The SeaSeaS team',
-    photoText: 'An experienced team with a track record in developing, building and operating cryogenic tank terminals, including GATE, CO₂next, Vopak Vlissingen and Advario.',
+    photoText: 'An experienced core team with a track record in developing, building and operating cryogenic tank terminals, including GATE, CO₂next, Vopak and Advario.',
     photoAlt: 'The SeaSeaS team',
     onLinkedin: 'on LinkedIn',
   },
