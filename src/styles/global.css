@@ -500,9 +500,10 @@ button { font: inherit; cursor: pointer; }
 .marquee-track { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; flex: none; min-height: 112px; }
 .marquee-track li { flex: none; padding: 0 36px; display: flex; align-items: center; }
 .marquee-track a { display: block; transition: opacity .2s ease, transform .2s ease; }
-.marquee-track a:hover { opacity: .8; transform: scale(1.04); }
+@media (hover: hover) { .marquee-track a:hover { opacity: .8; transform: scale(1.04); } }
 .marquee-track img { display: block; width: var(--w); max-width: none; height: var(--h); flex: none; }
-.marquee:hover .marquee-inner, .marquee:focus-within .marquee-inner { animation-play-state: paused; }
+@media (hover: hover) { .marquee:hover .marquee-inner { animation-play-state: paused; } }
+.marquee:has(:focus-visible) .marquee-inner { animation-play-state: paused; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (max-width: 900px) {
   .partners { margin-top: 48px; }
