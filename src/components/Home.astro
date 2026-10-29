@@ -17,7 +17,7 @@ const news = (await getCollection('news', (e) => !e.data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const team = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
 
-const MAPS = ['map-1-site-v3', 'map-2-port-region-v2', 'map-3-northwest-europe-v2'];
+const MAPS = ['map-1-site-v4', 'map-2-port-region-v2', 'map-3-northwest-europe-v3'];
 const picto = (name: string) => withBase(`/images/pictograms/${name}.png`);
 const stepIcons = ['emitter', null, 'terminal', 'vessel', 'sink'];
 const stepClass = ['', '', 'is-terminal', '', 'is-storage'];
