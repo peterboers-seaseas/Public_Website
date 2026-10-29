@@ -93,10 +93,10 @@ export default {
     lead: 'Why emitters choose SeaSeaS',
     intro: 'Flexibility in inbound transport modality, storage destination and timing, so you can build a feasible export route for your CO₂.',
     cards: [
-      { icon: 'rail', title: 'Multimodal access', text: 'Open to all emitters on equal terms. Deliver your liquid CO₂ by barge, rail, truck or cryogenic pipeline, whether or not your site is connected to a CO₂ pipeline network.' },
-      { icon: 'sink', title: 'Keep your storage options open', text: 'Ship to a range of North Sea storage sites as they come online, instead of tying your project to a single transport and storage chain.' },
+      { icon: 'rail', title: 'Multimodal access', text: 'Open to all emitters. Deliver your liquid CO₂ by barge, rail, truck or cryogenic pipeline, whether or not your site is connected to a CO₂ pipeline network.' },
+      { icon: 'sink', title: 'Keep your storage options open', text: 'Select the North Sea storage site that best fits your supply chain or project, with increasing options to additional sites as they become available.' },
       { icon: 'terminal', title: 'Scalable buffer capacity', text: 'Starting at around 1 Mtpa in 2030 keeps the investment decision within reach of a few early customers. The terminal is designed to expand to 3.5 Mtpa as demand grows.' },
-      { icon: 'bullet', title: 'Reduce project-on-project risk', text: 'If other CO₂ infrastructure is delayed, SeaSeaS gives your capture plant another route to storage. Start sooner, and depend less on any single pipeline or storage project.' },
+      { icon: 'bullet', title: 'Reduce project-on-project risk', text: 'If other CO₂ infrastructure is delayed, SeaSeaS gives your capture plant another route to permanent storage. Start sooner, and depend less on a single pipeline or storage project.' },
     ],
   },
   how: {

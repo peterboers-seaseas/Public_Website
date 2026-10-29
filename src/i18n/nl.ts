@@ -92,10 +92,10 @@ export default {
     lead: 'Waarom emittenten voor SeaSeaS kiezen',
     intro: 'Flexibiliteit in aanvoermodaliteit, opslagbestemming en timing, zodat u een haalbare exportroute voor uw CO₂ kunt opzetten.',
     cards: [
-      { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten, onder gelijke voorwaarden. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
-      { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Verscheep naar verschillende opslaglocaties onder de Noordzee zodra die beschikbaar komen, in plaats van uw project te binden aan één transport- en opslagketen.' },
+      { icon: 'rail', title: 'Multimodale toegang', text: 'Open voor alle emittenten. Lever uw vloeibare CO₂ aan per binnenvaartschip, trein, vrachtwagen of cryogene pijpleiding, of uw locatie nu wel of niet is aangesloten op een CO₂-pijpleidingnetwerk.' },
+      { icon: 'sink', title: 'Houd uw opslagopties open', text: 'Kies de opslaglocatie onder de Noordzee die het best past bij uw keten of project, met steeds meer opties naarmate nieuwe locaties beschikbaar komen.' },
       { icon: 'terminal', title: 'Schaalbare buffercapaciteit', text: 'Met een start rond 1 Mtpa in 2030 ligt het investeringsbesluit binnen bereik van enkele eerste klanten. De terminal is ontworpen om mee te groeien naar 3,5 Mtpa naarmate de vraag toeneemt.' },
-      { icon: 'bullet', title: 'Minder afhankelijk van andere projecten', text: 'Loopt andere CO₂-infrastructuur vertraging op? Dan biedt SeaSeaS uw afvanginstallatie een alternatieve route naar opslag. Start eerder en wees minder afhankelijk van één pijpleiding of opslagproject.' },
+      { icon: 'bullet', title: 'Minder afhankelijk van andere projecten', text: 'Loopt andere CO₂-infrastructuur vertraging op? Dan biedt SeaSeaS uw afvanginstallatie een alternatieve route naar permanente opslag. Start eerder en wees minder afhankelijk van één pijpleiding of opslagproject.' },
     ],
   },
   how: {
