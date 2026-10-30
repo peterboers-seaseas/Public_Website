@@ -193,9 +193,9 @@ export default {
         { h: 'How long we keep it', p: ['We keep contact details and correspondence for as long as needed to handle your enquiry, and no longer than 24 months after our last contact, unless a business relationship requires longer retention or the law obliges us to keep it. Technical log data is kept by our hosting provider for a limited period only.'] },
         { h: 'Who we share it with', p: ['We do not share your data with third parties for their own purposes. We use a small number of service providers who process data only on our instructions, under a data processing agreement:'], list: [
           '<strong>Form.taxi</strong> (Austria), which receives messages sent through our contact form and forwards them to us by email. Form.taxi stores data on servers within the European Union.',
-          '<strong>Our hosting provider</strong>, which hosts this website on servers in Germany and may log technical data, such as IP addresses, to keep the website secure.',
+          '<strong>GitHub</strong> (GitHub, Inc., United States), which hosts this website and may log technical data, such as IP addresses, to keep the website secure.',
           '<strong>Google</strong> (Google Workspace), which provides our email services.',
-        ], after: ['Some of these providers, such as Google, may process data outside the European Economic Area. In that case, appropriate safeguards are in place, such as the EU-U.S. Data Privacy Framework or the European Commission’s Standard Contractual Clauses.'] },
+        ], after: ['Some of these providers, such as GitHub and Google, may process data outside the European Economic Area. In that case, appropriate safeguards are in place, such as the EU-U.S. Data Privacy Framework or the European Commission’s Standard Contractual Clauses.'] },
         { h: 'Cookies', p: [
           'This website does not use tracking, analytics or advertising cookies. Fonts and videos are hosted on our own website, so no data is sent to third parties such as Google or YouTube when you visit. If we use any cookies at all, they are strictly necessary for the website to function, and they do not require your consent.',
           'Links to external websites, such as LinkedIn, are subject to the privacy and cookie policies of those websites.',
