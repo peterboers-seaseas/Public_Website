@@ -28,3 +28,7 @@ export const PARTNERS = [
   { name: 'Victrol', logo: '/images/partners/victrol.png', url: 'https://www.victrol.be/highly-qualified-waterway-transport-all-over-europe/', h: 42, ar: 1.659 },
   { name: 'Schenk Tanktransport', logo: '/images/partners/schenk.svg', url: 'https://www.schenk-tanktransport.com/?noredirect=en-US', h: 30, ar: 3.415 },
 ];
+
+// Dutch version: set to true once the translations have been proofread.
+// While false, every /nl/ page shows an "under construction" page (the Dutch content stays in src/i18n/nl.ts).
+export const NL_LIVE = false;

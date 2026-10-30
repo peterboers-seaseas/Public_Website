@@ -1,4 +1,6 @@
 ---
+import { NL_LIVE } from '../../../config';
+import UnderConstruction from '../../../components/UnderConstruction.astro';
 import { getCollection } from 'astro:content';
 import ArticlePage from '../../../components/ArticlePage.astro';
 export async function getStaticPaths() {
@@ -7,4 +9,4 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props;
 ---
-<ArticlePage lang="nl" entry={entry} />
+{NL_LIVE ? (<ArticlePage lang="nl" entry={entry} />) : <UnderConstruction page={`news/${entry.id}`} />}

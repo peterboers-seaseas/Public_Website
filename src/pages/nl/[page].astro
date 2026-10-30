@@ -1,8 +1,10 @@
 ---
+import { NL_LIVE } from '../../config';
+import UnderConstruction from '../../components/UnderConstruction.astro';
 import LegalPage from '../../components/LegalPage.astro';
 export function getStaticPaths() {
   return ['privacy', 'disclaimer'].map((page) => ({ params: { page } }));
 }
 const { page } = Astro.params as { page: 'privacy' | 'disclaimer' };
 ---
-<LegalPage lang="nl" page={page} />
+{NL_LIVE ? (<LegalPage lang="nl" page={page} />) : <UnderConstruction page={page} />}

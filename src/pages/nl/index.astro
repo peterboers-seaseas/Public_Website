@@ -1,5 +1,7 @@
 ---
+import { NL_LIVE } from '../../config';
+import UnderConstruction from '../../components/UnderConstruction.astro';
 import Base from '../../layouts/Base.astro';
 import Home from '../../components/Home.astro';
 ---
-<Base lang="nl"><Home lang="nl" /></Base>
+{NL_LIVE ? (<Base lang="nl"><Home lang="nl" /></Base>) : <UnderConstruction page={''} />}

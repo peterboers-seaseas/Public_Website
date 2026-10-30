@@ -1,4 +1,6 @@
 ---
+import { NL_LIVE } from '../../config';
+import UnderConstruction from '../../components/UnderConstruction.astro';
 import NewsArchive from '../../components/NewsArchive.astro';
 ---
-<NewsArchive lang="nl" />
+{NL_LIVE ? (<NewsArchive lang="nl" />) : <UnderConstruction page={'news'} />}

@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../i18n';
+interface Props { page?: string }
+const { page = '' } = Astro.props;
+---
+<Base lang="nl" title="In aanbouw" page={page}>
+  <section class="uc">
+    <div class="wrap uc-grid">
+      <svg class="uc-crane" viewBox="0 0 320 300" role="img" aria-label="Bouwkraan">
+        <!-- ground -->
+        <rect x="20" y="284" width="280" height="4" rx="2" fill="#CCCAFB" />
+        <!-- mast -->
+        <g stroke="#09029B" stroke-width="3" fill="none" stroke-linejoin="round">
+          <path d="M92 284 V62 M116 284 V62" />
+          <path d="M92 284 L116 256 L92 228 L116 200 L92 172 L116 144 L92 116 L116 88 L92 62" stroke-width="2" />
+          <!-- jib + counter-jib -->
+          <path d="M40 62 H300 M58 48 H282 L300 62" />
+          <path d="M58 48 L72 62 L86 48 L100 62 L114 48 L128 62 L142 48 L156 62 L170 48 L184 62 L198 48 L212 62 L226 48 L240 62 L254 48 L268 62 L282 48" stroke-width="2" />
+          <path d="M104 62 L104 22 M104 22 L300 60 M104 22 L40 60" stroke-width="2" />
+        </g>
+        <!-- cab + counterweight -->
+        <rect x="116" y="64" width="26" height="20" rx="3" fill="#8983F6" />
+        <rect x="122" y="68" width="14" height="9" rx="1.5" fill="#E5F4ED" />
+        <rect x="40" y="64" width="34" height="18" rx="2" fill="#09029B" />
+        <!-- trolley + swinging hook with load -->
+        <rect x="226" y="62" width="16" height="7" rx="2" fill="#09029B" />
+        <g class="uc-hook">
+          <line x1="234" y1="69" x2="234" y2="170" stroke="#09029B" stroke-width="2" />
+          <path d="M234 170 v12 a7 7 0 1 1 -13 4" fill="none" stroke="#09029B" stroke-width="3" stroke-linecap="round" />
+          <path d="M228 190 L212 204 M228 190 L256 204" stroke="#8983F6" stroke-width="2" />
+          <rect x="204" y="204" width="60" height="34" rx="4" fill="#0E02ED" />
+          <text x="234" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="'Be Vietnam Pro', sans-serif">NL</text>
+        </g>
+      </svg>
+      <div>
+        <p class="uc-kicker">Nederlandse versie</p>
+        <h1>We bouwen nog aan deze pagina</h1>
+        <p>De Nederlandse versie van onze website is in aanbouw. In de tussentijd vindt u alle informatie op de Engelse website.</p>
+        <p class="uc-en" lang="en">The Dutch version of our website is under construction. Please continue in English.</p>
+        <a class="btn btn-primary" href={url('en', page)} hreflang="en" lang="en">Go to the English website</a>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .uc { padding: 72px 0 144px; }
+  .uc-grid { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 64px; align-items: center; }
+  .uc-crane { width: 100%; height: auto; display: block; }
+  .uc-kicker { font-size: 15px; font-weight: 600; color: var(--ultramarine); padding-top: 10px; border-top: 2px solid var(--ultramarine); display: inline-block; min-width: 240px; }
+  .uc h1 { margin-top: 20px; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.08; letter-spacing: -1px; color: var(--ultramarine); }
+  .uc p { margin-top: 20px; max-width: 560px; }
+  .uc .uc-en { color: #4A4870; font-size: 15px; margin-top: 12px; }
+  .uc .btn { margin-top: 32px; }
+  .uc-hook { transform-origin: 234px 69px; animation: swing 4s ease-in-out infinite; }
+  @keyframes swing { 0%, 100% { transform: rotate(4deg); } 50% { transform: rotate(-4deg); } }
+  @media (prefers-reduced-motion: reduce) { .uc-hook { animation: none; } }
+  @media (max-width: 900px) {
+    .uc { padding: 40px 0 96px; }
+    .uc-grid { grid-template-columns: 1fr; gap: 32px; }
+    .uc-crane { max-width: 300px; }
+  }
+</style>
