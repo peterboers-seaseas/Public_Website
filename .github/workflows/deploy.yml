@@ -15,6 +15,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Remove this line once the custom domain (nieuw.seaseas.nl / www.seaseas.nl) is set in Settings > Pages.
+      SITE_BASE: /Public_Website
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
